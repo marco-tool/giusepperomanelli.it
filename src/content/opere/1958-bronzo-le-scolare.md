@@ -11,3 +11,4 @@ fonte: "libreria 2019"
 da_completare: true
 ---
 
+Collocazione: Scuola Media di Bassano del Grappa, secondo la brochure della mostra del 1968 (nella biografia: «Studentesse», Scuola Media «Stefanini», Bassano del Grappa). Il curriculum dattiloscritto indica invece la Nuova Scuola Media di Burano.

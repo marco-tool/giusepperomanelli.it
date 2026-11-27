@@ -2,58 +2,52 @@ codice,file_scheda,titolo_attuale,anno_attuale,materiale,manca_titolo,manca_anno
 O1,src/content/opere/1940-terracotta-terracotta-senza-titolo.md,"Terracotta, senza titolo",1940,Terracotta,sì,
 O2,src/content/opere/1940-1950-terracotta-terracotta-senza-titolo-2.md,"Terracotta, senza titolo",1940-1950,Terracotta,sì,
 O3,src/content/opere/1940-1950-terracotta-terracotta-senza-titolo.md,"Terracotta, senza titolo",1940-1950,Terracotta,sì,
-O4,src/content/opere/1941-terracotta-terracotta-senza-titolo-2.md,"Terracotta, senza titolo",1941,Terracotta,sì,
-O5,src/content/opere/1941-terracotta-terracotta-senza-titolo-3.md,"Terracotta, senza titolo",1941,Terracotta,sì,
-O6,src/content/opere/1941-terracotta-terracotta-senza-titolo.md,"Terracotta, senza titolo",1941,Terracotta,sì,
-O7,src/content/opere/1942-terracotta-terracotta-senza-titolo.md,"Terracotta, senza titolo",1942,Terracotta,sì,
-O8,src/content/opere/1943-terracotta-terracotta-senza-titolo.md,"Terracotta, senza titolo",1943,Terracotta,sì,
-O9,src/content/opere/1944-terracotta-terracotta-senza-titolo.md,"Terracotta, senza titolo",1944,Terracotta,sì,
-O10,src/content/opere/1950-legno-legno-senza-titolo.md,"Legno, senza titolo",1950,Legno,sì,
-O11,src/content/opere/1953-terracotta-terracotta-senza-titolo.md,"Terracotta, senza titolo",1953,Terracotta,sì,
-O12,src/content/opere/1964-bronzo-bronzo-senza-titolo.md,"Bronzo, senza titolo",1964,Bronzo,sì,
-O13,src/content/opere/1969-disegno-disegno-senza-titolo-2.md,"Disegno, senza titolo",1969,Disegno,sì,
-O14,src/content/opere/1969-disegno-disegno-senza-titolo.md,"Disegno, senza titolo",1969,Disegno,sì,
-O15,src/content/opere/1970-disegno-disegno-senza-titolo.md,"Disegno, senza titolo",1970,Disegno,sì,
-O16,src/content/opere/1971-disegno-disegno-senza-titolo-2.md,"Disegno, senza titolo",1971,Disegno,sì,
-O17,src/content/opere/1971-disegno-disegno-senza-titolo-3.md,"Disegno, senza titolo",1971,Disegno,sì,
-O18,src/content/opere/1971-disegno-disegno-senza-titolo-4.md,"Disegno, senza titolo",1971,Disegno,sì,
-O19,src/content/opere/1971-disegno-disegno-senza-titolo-5.md,"Disegno, senza titolo",1971,Disegno,sì,
-O20,src/content/opere/1971-disegno-disegno-senza-titolo-6.md,"Disegno, senza titolo",1971,Disegno,sì,
-O21,src/content/opere/1971-disegno-disegno-senza-titolo-7.md,"Disegno, senza titolo",1971,Disegno,sì,
-O22,src/content/opere/1971-disegno-disegno-senza-titolo-8.md,"Disegno, senza titolo",1971,Disegno,sì,
-O23,src/content/opere/1971-disegno-disegno-senza-titolo-9.md,"Disegno, senza titolo",1971,Disegno,sì,
-O24,src/content/opere/1971-disegno-disegno-senza-titolo.md,"Disegno, senza titolo",1971,Disegno,sì,
-O25,src/content/opere/1972-disegno-disegno-senza-titolo-2.md,"Disegno, senza titolo",1972,Disegno,sì,
-O26,src/content/opere/1972-disegno-disegno-senza-titolo-3.md,"Disegno, senza titolo",1972,Disegno,sì,
-O27,src/content/opere/1972-disegno-disegno-senza-titolo.md,"Disegno, senza titolo",1972,Disegno,sì,
-O28,src/content/opere/1972-incisione-incisione-senza-titolo.md,"Incisione, senza titolo",1972,Incisione,sì,
-O29,src/content/opere/1974-terracotta-terracotta-senza-titolo.md,"Terracotta, senza titolo",1974,Terracotta,sì,
-O30,src/content/opere/1976-terracotta-terracotta-senza-titolo.md,"Terracotta, senza titolo",1976,Terracotta,sì,
-O31,src/content/opere/1979-alabastro-bardiglio-alabastro-bardiglio-senza-titolo.md,"Alabastro bardiglio, senza titolo",1979,Alabastro bardiglio,sì,
-O32,src/content/opere/1979-disegno-disegno-senza-titolo.md,"Disegno, senza titolo",1979,Disegno,sì,
-O33,src/content/opere/orificeria-anello-e-orecchini.md,Anello e orecchini,,oreficeria,,sì
-O34,src/content/opere/argento-santa-chiara.md,Santa Chiara,,Argento,,sì
-O35,src/content/opere/bassorilievo-1.md,Bassorilievo,,Bassorilievo,sì,sì
-O36,src/content/opere/bassorilievo-bassorilievo-senza-titolo-2.md,"Bassorilievo, senza titolo",,Bassorilievo,sì,sì
-O37,src/content/opere/bassorilievo-bassorilievo-senza-titolo-3.md,"Bassorilievo, senza titolo",,Bassorilievo,sì,sì
-O38,src/content/opere/bassorilievo-bassorilievo-senza-titolo-4.md,"Bassorilievo, senza titolo",,Bassorilievo,sì,sì
-O39,src/content/opere/bassorilievo-bassorilievo-senza-titolo.md,"Bassorilievo, senza titolo",,Bassorilievo,sì,sì
-O40,src/content/opere/bronzo-cancello.md,Cancello,,Bronzo,,sì
-O41,src/content/opere/bronzo-cristo.md,Cristo,,Bronzo,,sì
-O42,src/content/opere/creta-jona-rigettato-dalla-balena.md,Jona rigettato dalla balena,,Creta,,sì
-O43,src/content/opere/creta-madonna.md,Madonna,,Creta,,sì
-O44,src/content/opere/creta-santa-chiara.md,Santa Chiara,,Creta,,sì
-O45,src/content/opere/disegno-disegno-senza-titolo-2.md,"Disegno, senza titolo",,Disegno,sì,sì
-O46,src/content/opere/disegno-disegno-senza-titolo-3.md,"Disegno, senza titolo",,Disegno,sì,sì
-O47,src/content/opere/disegno-disegno-senza-titolo.md,"Disegno, senza titolo",,Disegno,sì,sì
-O48,src/content/opere/incisione-incisione-senza-titolo-2.md,"Incisione, senza titolo",,Incisione,sì,sì
-O49,src/content/opere/incisione-incisione-senza-titolo-3.md,"Incisione, senza titolo",,Incisione,sì,sì
-O50,src/content/opere/incisione-incisione-senza-titolo-4.md,"Incisione, senza titolo",,Incisione,sì,sì
-O51,src/content/opere/incisione-incisione-senza-titolo-5.md,"Incisione, senza titolo",,Incisione,sì,sì
-O52,src/content/opere/incisione-incisione-senza-titolo-6.md,"Incisione, senza titolo",,Incisione,sì,sì
-O53,src/content/opere/incisione-incisione-senza-titolo-7.md,"Incisione, senza titolo",,Incisione,sì,sì
-O54,src/content/opere/incisione-incisione-senza-titolo.md,"Incisione, senza titolo",,Incisione,sì,sì
-O55,src/content/opere/marmo-marmo-senza-titolo-2.md,"Marmo, senza titolo",,Marmo,sì,sì
-O56,src/content/opere/marmo-marmo-senza-titolo.md,"Marmo, senza titolo",,Marmo,sì,sì
-O57,src/content/opere/oro-argento-e-rame-sbalzati-spille.md,Spille,,"Oro, argento e rame sbalzati",,sì
-O58,src/content/opere/osso-osso-senza-titolo.md,"Osso, senza titolo",,Osso,sì,sì
+O4,src/content/opere/1941-terracotta-terracotta-senza-titolo.md,"Terracotta, senza titolo",1941,Terracotta,sì,
+O5,src/content/opere/1942-terracotta-terracotta-senza-titolo.md,"Terracotta, senza titolo",1942,Terracotta,sì,
+O6,src/content/opere/1943-terracotta-terracotta-senza-titolo.md,"Terracotta, senza titolo",1943,Terracotta,sì,
+O7,src/content/opere/1944-terracotta-terracotta-senza-titolo.md,"Terracotta, senza titolo",1944,Terracotta,sì,
+O8,src/content/opere/1953-terracotta-terracotta-senza-titolo.md,"Terracotta, senza titolo",1953,Terracotta,sì,
+O9,src/content/opere/1964-bronzo-bronzo-senza-titolo.md,"Bronzo, senza titolo",1964,Bronzo,sì,
+O10,src/content/opere/1969-disegno-disegno-senza-titolo-2.md,"Disegno, senza titolo",1969,Disegno,sì,
+O11,src/content/opere/1969-disegno-disegno-senza-titolo.md,"Disegno, senza titolo",1969,Disegno,sì,
+O12,src/content/opere/1970-disegno-disegno-senza-titolo.md,"Disegno, senza titolo",1970,Disegno,sì,
+O13,src/content/opere/1971-disegno-disegno-senza-titolo-2.md,"Disegno, senza titolo",1971,Disegno,sì,
+O14,src/content/opere/1971-disegno-disegno-senza-titolo-3.md,"Disegno, senza titolo",1971,Disegno,sì,
+O15,src/content/opere/1971-disegno-disegno-senza-titolo-4.md,"Disegno, senza titolo",1971,Disegno,sì,
+O16,src/content/opere/1971-disegno-disegno-senza-titolo-5.md,"Disegno, senza titolo",1971,Disegno,sì,
+O17,src/content/opere/1971-disegno-disegno-senza-titolo-6.md,"Disegno, senza titolo",1971,Disegno,sì,
+O18,src/content/opere/1971-disegno-disegno-senza-titolo-8.md,"Disegno, senza titolo",1971,Disegno,sì,
+O19,src/content/opere/1971-disegno-disegno-senza-titolo.md,"Disegno, senza titolo",1971,Disegno,sì,
+O20,src/content/opere/1972-disegno-disegno-senza-titolo-2.md,"Disegno, senza titolo",1972,Disegno,sì,
+O21,src/content/opere/1972-disegno-disegno-senza-titolo-3.md,"Disegno, senza titolo",1972,Disegno,sì,
+O22,src/content/opere/1972-disegno-disegno-senza-titolo.md,"Disegno, senza titolo",1972,Disegno,sì,
+O23,src/content/opere/1972-incisione-incisione-senza-titolo.md,"Incisione, senza titolo",1972,Incisione,sì,
+O24,src/content/opere/1974-terracotta-terracotta-senza-titolo.md,"Terracotta, senza titolo",1974,Terracotta,sì,
+O25,src/content/opere/1976-terracotta-terracotta-senza-titolo.md,"Terracotta, senza titolo",1976,Terracotta,sì,
+O26,src/content/opere/1979-alabastro-bardiglio-alabastro-bardiglio-senza-titolo.md,"Alabastro bardiglio, senza titolo",1979,Alabastro bardiglio,sì,
+O27,src/content/opere/1979-disegno-disegno-senza-titolo.md,"Disegno, senza titolo",1979,Disegno,sì,
+O28,src/content/opere/argento-santa-chiara.md,Santa Chiara,,Argento,,sì
+O29,src/content/opere/bassorilievo-1.md,Bassorilievo,,Bassorilievo,sì,sì
+O30,src/content/opere/bassorilievo-bassorilievo-senza-titolo-2.md,"Bassorilievo, senza titolo",,Bassorilievo,sì,sì
+O31,src/content/opere/bassorilievo-bassorilievo-senza-titolo-3.md,"Bassorilievo, senza titolo",,Bassorilievo,sì,sì
+O32,src/content/opere/bassorilievo-bassorilievo-senza-titolo-4.md,"Bassorilievo, senza titolo",,Bassorilievo,sì,sì
+O33,src/content/opere/bassorilievo-bassorilievo-senza-titolo.md,"Bassorilievo, senza titolo",,Bassorilievo,sì,sì
+O34,src/content/opere/bronzo-cancello.md,Cancello,,Bronzo,,sì
+O35,src/content/opere/bronzo-cristo.md,Cristo,,Bronzo,,sì
+O36,src/content/opere/creta-jona-rigettato-dalla-balena.md,Jona rigettato dalla balena,,Creta,,sì
+O37,src/content/opere/creta-madonna.md,Madonna,,Creta,,sì
+O38,src/content/opere/creta-santa-chiara.md,Santa Chiara,,Creta,,sì
+O39,src/content/opere/disegno-disegno-senza-titolo-2.md,"Disegno, senza titolo",,Disegno,sì,sì
+O40,src/content/opere/disegno-disegno-senza-titolo-3.md,"Disegno, senza titolo",,Disegno,sì,sì
+O41,src/content/opere/disegno-disegno-senza-titolo.md,"Disegno, senza titolo",,Disegno,sì,sì
+O42,src/content/opere/incisione-incisione-senza-titolo-2.md,"Incisione, senza titolo",,Incisione,sì,sì
+O43,src/content/opere/incisione-incisione-senza-titolo-3.md,"Incisione, senza titolo",,Incisione,sì,sì
+O44,src/content/opere/incisione-incisione-senza-titolo-4.md,"Incisione, senza titolo",,Incisione,sì,sì
+O45,src/content/opere/incisione-incisione-senza-titolo-5.md,"Incisione, senza titolo",,Incisione,sì,sì
+O46,src/content/opere/incisione-incisione-senza-titolo-6.md,"Incisione, senza titolo",,Incisione,sì,sì
+O47,src/content/opere/incisione-incisione-senza-titolo-7.md,"Incisione, senza titolo",,Incisione,sì,sì
+O48,src/content/opere/incisione-incisione-senza-titolo.md,"Incisione, senza titolo",,Incisione,sì,sì
+O49,src/content/opere/marmo-marmo-senza-titolo-2.md,"Marmo, senza titolo",,Marmo,sì,sì
+O50,src/content/opere/oro-argento-e-rame-sbalzati-spille.md,Spille,,"Oro, argento e rame sbalzati",,sì
+O51,src/content/opere/osso-osso-senza-titolo.md,"Osso, senza titolo",,Osso,sì,sì
+O52,src/content/opere/orificeria-anello-e-orecchini.md,Anello e orecchini,,oreficeria,,sì
