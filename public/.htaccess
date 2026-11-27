@@ -10,3 +10,13 @@ ErrorDocument 404 /404.html
     Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
 </IfModule>
+
+# Vecchie categorie ancora senza opere: rimanda a /opere/ (302, temporaneo).
+# Appena una categoria ha un'opera, la sua pagina esiste e la regola non scatta più.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{REQUEST_FILENAME}/index.html !-f
+  RewriteRule ^opere/(bronzi|incisioni|legni|rame|terracotta)/?$ /opere/ [R=302,L]
+  # Vecchia URL della home WordPress
+  RewriteRule ^home-4/?$ / [R=301,L]
+</IfModule>
