@@ -39,8 +39,9 @@ npm run build    # genera dist/
 
 ## Pubblicazione
 
-Workflow manuale `Deploy su Aruba` (GitHub Actions). Secret richiesti nel repository:
-`FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`, `FTP_SERVER_DIR` (cartella del sito sull'hosting).
+- **Anteprima**: https://marco-tool.github.io/giusepperomanelli.it/ (GitHub Pages, workflow `Anteprima su GitHub Pages`, si aggiorna a ogni push su main, non indicizzata). `scripts/anteprima.py` adatta gli indirizzi alla sottocartella.
+- **Sito vero**: workflow manuale `Deploy su Aruba`. Secret: `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`, `FTP_SERVER_DIR` (cartella del sito sull'hosting).
+- **Backup del vecchio WordPress**: workflow manuale `Backup vecchio WordPress`, archivio cifrato con il secret `BACKUP_PASSWORD` (il repository è pubblico: gli artifact sono scaricabili da chiunque).
 
 ## Note sul recupero dal vecchio WordPress (27/11/2026)
 
