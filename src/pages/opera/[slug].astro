@@ -2,30 +2,59 @@
 import { getCollection, render } from 'astro:content';
 import { Image } from 'astro:assets';
 import Base from '../../layouts/Base.astro';
-import { CATEGORIE } from '../../categorie';
+import Griglia from '../../components/Griglia.astro';
+import { CATEGORIE, annoOrdine } from '../../categorie';
 
 export async function getStaticPaths() {
   const opere = await getCollection('opere');
-  return opere.map((o) => ({ params: { slug: o.id }, props: { o } }));
+  return opere.map((o) => {
+    const stesse = opere
+      .filter((x) => x.data.categoria === o.data.categoria)
+      .sort((a, b) => annoOrdine(a.data.anno) - annoOrdine(b.data.anno) || a.data.title.localeCompare(b.data.title, 'it'));
+    const i = stesse.findIndex((x) => x.id === o.id);
+    // "Altre opere": le 8 più vicine per data nella stessa categoria
+    const vicine = stesse.filter((x) => x.id !== o.id)
+      .sort((a, b) => Math.abs(stesse.indexOf(a) - i) - Math.abs(stesse.indexOf(b) - i)).slice(0, 8)
+      .sort((a, b) => stesse.indexOf(a) - stesse.indexOf(b));
+    return { params: { slug: o.id }, props: { o, prec: stesse[i - 1], succ: stesse[i + 1], vicine, totale: stesse.length } };
+  });
 }
-const { o } = Astro.props;
+const { o, prec, succ, vicine, totale } = Astro.props;
 const { Content } = await render(o);
 const d = o.data;
+const cat = CATEGORIE[d.categoria];
 ---
-<Base title={d.title}>
-  <a class="back" href={`/opere/${d.categoria}/`}>← {CATEGORIE[d.categoria]}</a>
+<Base title={d.title} description={`${d.title}${d.anno ? `, ${d.anno}` : ''}${d.materiale ? `, ${d.materiale.toLowerCase()}` : ''}. Opera di Giuseppe Romanelli.`}>
+  <a class="back" href={`/opere/${d.categoria}/`}>← {cat} ({totale})</a>
   <div class="opera">
     <div class="images">
-      {d.immagini.map((img, i) => <Image src={img} alt={`${d.title}${i ? ` (${i + 1})` : ''}`} widths={[700, 1200, 1800]} sizes="(max-width: 800px) 100vw, 700px" loading={i ? 'lazy' : 'eager'} />)}
+      {d.immagini.map((img, i) => (
+        <figure>
+          <Image src={img} alt={`${d.title}${d.immagini.length > 1 ? ` (foto ${i + 1} di ${d.immagini.length})` : ''}`} widths={[700, 1200, 1800]} sizes="(max-width: 800px) 100vw, 700px" loading={i ? 'lazy' : 'eager'} />
+          {d.didascalie?.[i] && <figcaption>{d.didascalie[i]}</figcaption>}
+        </figure>
+      ))}
     </div>
-    <div>
+    <div class="scheda">
       <h1 class="page-title">{d.title}</h1>
       <dl>
         {d.anno && <><dt>Anno</dt><dd>{d.anno}</dd></>}
-        {d.materiale && <><dt>Materiale</dt><dd>{d.materiale}</dd></>}
+        {d.materiale && <><dt>Tecnica</dt><dd>{d.materiale}</dd></>}
         {d.dimensioni && <><dt>Dimensioni</dt><dd>{d.dimensioni}</dd></>}
+        <dt>Categoria</dt><dd><a href={`/opere/${d.categoria}/`}>{cat}</a></dd>
+        {d.immagini.length > 1 && <><dt>Foto</dt><dd>{d.immagini.length}</dd></>}
       </dl>
       <div class="prose"><Content /></div>
+      <nav class="pn">
+        {prec ? <a href={`/opera/${prec.id}/`}>← {prec.data.title}</a> : <span />}
+        {succ && <a href={`/opera/${succ.id}/`}>{succ.data.title} →</a>}
+      </nav>
     </div>
   </div>
+  {vicine.length > 0 && (
+    <section class="altre">
+      <h2>Altre opere · {cat}</h2>
+      <Griglia opere={vicine} />
+    </section>
+  )}
 </Base>

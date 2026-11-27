@@ -1,30 +1,33 @@
 ---
 import { getCollection } from 'astro:content';
-import { Image } from 'astro:assets';
 import Base from '../../layouts/Base.astro';
-import { CATEGORIE, type Categoria } from '../../categorie';
+import Griglia from '../../components/Griglia.astro';
+import { CATEGORIE, annoOrdine, type Categoria } from '../../categorie';
 
-// Si genera una pagina solo per le categorie che contengono almeno un'opera
+// Una pagina per ogni categoria che contiene almeno un'opera
 export async function getStaticPaths() {
   const opere = await getCollection('opere');
   return (Object.keys(CATEGORIE) as Categoria[])
     .filter((k) => opere.some((o) => o.data.categoria === k))
-    .map((k) => ({ params: { categoria: k }, props: { opere: opere.filter((o) => o.data.categoria === k) } }));
+    .map((k) => ({
+      params: { categoria: k },
+      props: {
+        opere: opere
+          .filter((o) => o.data.categoria === k)
+          .sort((a, b) => annoOrdine(a.data.anno) - annoOrdine(b.data.anno) || a.data.title.localeCompare(b.data.title, 'it')),
+      },
+    }));
 }
 const { opere } = Astro.props;
-const label = CATEGORIE[Astro.params.categoria as Categoria];
+const k = Astro.params.categoria as Categoria;
+const label = CATEGORIE[k];
 ---
-<Base title={label}>
-  <a class="back" href="/opere/">← Tutte le opere</a>
+<Base title={label} description={`${label} di Giuseppe Romanelli: ${opere.length} opere.`}>
+  <a class="back" href="/opere/">← Tutte le categorie</a>
   <h1 class="page-title">{label}</h1>
-  <p class="lead">{opere.length} {opere.length === 1 ? 'opera' : 'opere'}</p>
-  <div class="grid">
-    {opere.map((o) => (
-      <a class="work" href={`/opera/${o.id}/`}>
-        <div class="frame"><Image src={o.data.immagini[0]} alt={o.data.title} widths={[300, 600]} sizes="300px" /></div>
-        <h3>{o.data.title}</h3>
-        <p>{[o.data.anno, o.data.materiale].filter(Boolean).join(' · ')}</p>
-      </a>
-    ))}
-  </div>
+  <p class="lead">{opere.length} {opere.length === 1 ? 'opera' : 'opere'}, in ordine cronologico</p>
+  <nav class="cat-nav">
+    {(Object.keys(CATEGORIE) as Categoria[]).map((c) => c === k ? <span>{CATEGORIE[c]}</span> : <a href={`/opere/${c}/`}>{CATEGORIE[c]}</a>)}
+  </nav>
+  <Griglia opere={opere} />
 </Base>

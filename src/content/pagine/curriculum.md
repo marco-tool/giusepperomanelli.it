@@ -121,3 +121,27 @@ Sue opere figurano nelle seguenti Gallerie e Collezioni:
 - Vico del         Gargano (Foggia) Convento         dei         frati       cappuccini: “Crocefisso in legno di tiglio m 1.80 X m. 2.00, bassorilievo con i simboli degli Evangelisti e SS. Sacramento in argento sbalzato con castonature in pietra dura.
 - Aya (Olanda), Museo Reale Numismatico, medaglia in bronzo “La Flagellazione” del   1940;
 - Rio De Janeiro, bassorilievo in terracotta.
+
+## Il curriculum originale
+
+Le pagine del curriculum dattiloscritto da cui è tratto il testo di questa pagina.
+
+![Curriculum dattiloscritto, pagina 1](../../assets/uploads/2019/09/curriculum_0001.jpg)
+
+![Curriculum dattiloscritto, pagina 2](../../assets/uploads/2019/09/curriculum_0002.jpg)
+
+![Curriculum dattiloscritto, pagina 3](../../assets/uploads/2019/09/curriculum_0003.jpg)
+
+![Curriculum dattiloscritto, pagina 4](../../assets/uploads/2019/09/curriculum_0004.jpg)
+
+![Curriculum dattiloscritto, pagina 5](../../assets/uploads/2019/09/curriculum_0005.jpg)
+
+![Curriculum dattiloscritto, pagina 6](../../assets/uploads/2019/09/curriculum_0006.jpg)
+
+![Curriculum dattiloscritto, pagina 7](../../assets/uploads/2019/09/curriculum_0007.jpg)
+
+![Curriculum dattiloscritto, pagina 8](../../assets/uploads/2019/09/curriculum_0008.jpg)
+
+![Curriculum dattiloscritto, pagina 9](../../assets/uploads/2019/09/curriculum_0009.jpg)
+
+![Curriculum dattiloscritto, pagina 10](../../assets/uploads/2019/09/curriculum_0010.jpg)

@@ -2,13 +2,15 @@
 title: "Opere pubbliche"
 ---
 
-Oltre alle numerose opere presenti in collezioni private, Romanelli ha realizzato numerose opere pubbliche. Di seguito alcune foto pubblicate nel sito della Parrocchia di Gesù Lavoratore (Venezia-Marghera) relative alla statua “Madonna di Fatima”.
+Oltre alle numerose opere presenti in collezioni private, Romanelli ha realizzato numerose opere pubbliche. Di seguito alcune foto pubblicate nel sito della [Parrocchia di Gesù Lavoratore](https://www.gesulavoratore.it/madonna-di-fatima.php) (Venezia-Marghera) relative alla statua “Madonna di Fatima”.
 
 Per segnalazioni o foto invitiamo a inviare una mail all’indirizzo che si trova nella sezione contatti.
 
 ![](../../assets/uploads/2019/10/madonna_fatima_1.jpg)
 
 Archivio Parrocchia Cristo Lavoratore - Comune di Venezia/Municipalità di Marghera.
+
+![Statua della Madonna di Fatima, Marghera](../../assets/uploads/2019/10/madonna_fatima_2.jpg)
 
 ![](../../assets/uploads/2019/10/madonna_fatima_3.jpg)
 

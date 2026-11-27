@@ -2,23 +2,30 @@
 import { getCollection } from 'astro:content';
 import { Image } from 'astro:assets';
 import Base from '../../layouts/Base.astro';
-import { CATEGORIE } from '../../categorie';
+import { CATEGORIE, type Categoria } from '../../categorie';
 
-const opere = (await getCollection('opere')).sort((a, b) => (a.data.anno ?? 9999) - (b.data.anno ?? 9999));
-const presenti = Object.entries(CATEGORIE).filter(([k]) => opere.some((o) => o.data.categoria === k));
+// Copertine di categoria preparate nel 2019 (se manca, si usa la prima opera)
+const copertine = import.meta.glob<{ default: ImageMetadata }>('../../assets/copertine/*.jpg', { eager: true });
+const copertina = (k: string) => copertine[`../../assets/copertine/${k}.jpg`]?.default;
+
+const opere = await getCollection('opere');
+const categorie = (Object.keys(CATEGORIE) as Categoria[])
+  .map((k) => ({ k, label: CATEGORIE[k], opere: opere.filter((o) => o.data.categoria === k) }))
+  .filter((c) => c.opere.length > 0);
+const totale = opere.length;
+const foto = opere.reduce((n, o) => n + o.data.immagini.length, 0);
 ---
-<Base title="Opere">
+<Base title="Opere" description={`Catalogo delle opere di Giuseppe Romanelli: ${totale} opere tra sculture, incisioni e disegni, dal 1937 al 1982.`}>
   <h1 class="page-title">Opere</h1>
-  <p class="lead">Una selezione delle sculture. Il catalogo è in corso di riordino: nuove opere verranno aggiunte nel tempo.</p>
-  <nav class="cat-nav">
-    {presenti.map(([k, label]) => <a href={`/opere/${k}/`}>{label}</a>)}
-  </nav>
-  <div class="grid">
-    {opere.map((o) => (
-      <a class="work" href={`/opera/${o.id}/`}>
-        <div class="frame"><Image src={o.data.immagini[0]} alt={o.data.title} widths={[300, 600]} sizes="300px" /></div>
-        <h3>{o.data.title}</h3>
-        <p>{[o.data.anno, o.data.materiale].filter(Boolean).join(' · ')}</p>
+  <p class="lead">{totale} opere, {foto} fotografie, dal 1937 al 1982. Il catalogo è in corso di riordino: titoli, date e misure verranno completati nel tempo.</p>
+  <div class="cats">
+    {categorie.map((c) => (
+      <a class="cat" href={`/opere/${c.k}/`}>
+        <div class="frame">
+          <Image src={copertina(c.k) ?? c.opere[0].data.immagini[0]} alt={c.label} widths={[400, 800]} sizes="(max-width: 700px) 100vw, 380px" />
+        </div>
+        <h2>{c.label}</h2>
+        <p>{c.opere.length} {c.opere.length === 1 ? 'opera' : 'opere'}</p>
       </a>
     ))}
   </div>

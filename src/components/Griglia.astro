@@ -1,0 +1,15 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { Image } from 'astro:assets';
+interface Props { opere: CollectionEntry<'opere'>[] }
+const { opere } = Astro.props;
+---
+<div class="grid">
+  {opere.map((o) => (
+    <a class="work" href={`/opera/${o.id}/`}>
+      <div class="frame"><Image src={o.data.immagini[0]} alt={o.data.title} widths={[300, 600]} sizes="(max-width: 600px) 45vw, 260px" /></div>
+      <h3>{o.data.title}</h3>
+      <p>{[o.data.anno, o.data.materiale].filter(Boolean).join(' · ')}{o.data.immagini.length > 1 && ` · ${o.data.immagini.length} foto`}</p>
+    </a>
+  ))}
+</div>
