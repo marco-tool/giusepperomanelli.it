@@ -4,6 +4,8 @@ title: "Curriculum"
 
 ![Giuseppe Romanelli](../../assets/uploads/2019/09/IMG_0006-1.jpg)
 
+Giuseppe Romanelli, nato a Venezia il 2 marzo 1916, morto il 2 luglio 1982.
+
 Giuseppe Romanelli scolpisce e disegna da quando, ancora bambino, imparava i primi segreti tecnici nella bottega di un severo scalpellino e contemporaneamente studiava all’istituto d’Arte dei Carmini (Venezia) dove si è diplomato, poi  il Magistero e all’Accademia delle Belle Arti di Venezia, sotto la guida dei Maestri Bellotto, Baglioni e Martini.
 
 Molto importante è per lui l’incontro con Arturo Martini, incide molto sulla sua formazione.
@@ -29,7 +31,7 @@ Nel 1940 gli viene assegnato in premio (al Palazzo Cà Pesaro il grande studio s
 
 5. Esecuzione di un trofeo in bronzo per commissione del Ministero della cultura popolare quale premio da assegnare alla Mostra Internazionale d’Arte Cinematografica di Venezia, settembre 1940.
 6. Mostra Nazionale del Sindacato di belle Arti – Milano 1941 – Acquisto Galleria Gian Ferrari.
-7. 7° Esecuzione di un trofeo in bronzo per commissione del Ministero della cultura popolare quale premio da assegnarsi alla X 0 Mostra Internazionale d’Arte Cinematografica di Venezia – Agosto 1942.
+7. Esecuzione di un trofeo in bronzo per commissione del Ministero della cultura popolare quale premio da assegnarsi alla X° Mostra Internazionale d’Arte Cinematografica di Venezia – Agosto 1942.
 8. Mostra Sindacale Triveneta – Venezia, segnalato – Acquisto del Comune di Venezia.
 9. XXXV Mostra dell’Opera Bevilacqua “La Masa” – Venezia 1947- Segnalato – Acquisto del Ministero della Pubblica istruzione – Acquisto per la Galleria Internazionale d’Arte Moderna di Venezia.
 10. Mostra Triveneta del Ritratto – Udine 1946 – Segnalato.
@@ -37,8 +39,8 @@ Nel 1940 gli viene assegnato in premio (al Palazzo Cà Pesaro il grande studio s
 12. Premio per la scultura, Mostra Collettiva delle associazioni giovani artisti “Galleria dell’Opera Bevilacqua La Masa ” – Venezia 1948.
 13. Premio per la scultura ex equo con un altro scultore – Concorso Premio d’incoraggiamento ad artisti e studiosi d’Arte indetto dal Ministero della Pubblica Istruzione – 16 Aprile 1947.
 14. Premio per la scultura – Concorso premi d’incoraggiamento ad artisti e studiosi d’arte indetto dal Ministero della Pubblica Istruzione – 16 Aprile 1948 Biennale d’Arte Triveneta – II Mostra.
-15. XXVI Mostra Collettiva Opera “Bevilacqua La Masa” – Venezia. Segnalato Acquisto del Comune di Venezia per la galleria Internazionale di Arte Moderna di Venezia.
-16. XXXVII Mostra Collettivo. Opera “Bevilacqua La Masa” – Venezia 1950 – Segnalato – Acquisto dal Comune di Venezia.
+15. XXVI Mostra Collettiva Opera “Bevilacqua La Masa” – Venezia 1949 – Segnalato Acquisto del Comune di Venezia per la galleria Internazionale di Arte Moderna di Venezia.
+16. XXXVII Mostra Collettiva Opera “Bevilacqua La Masa” – Venezia 1950 – Segnalato – Acquisto dal Comune di Venezia.
 17. Mostra Premio S. Remo di scultura, S. Remo 1952.
 18. Premio per la scultura nel premio d’arte sacra “Litte” di Pordenone 1953.
 19. Esecuzione di 12 Medaglie Premio in argento per la Mostra Internazionale Cinematografica della biennale di Venezia.
@@ -51,7 +53,7 @@ Nel 1940 gli viene assegnato in premio (al Palazzo Cà Pesaro il grande studio s
 23. Mostra Personale “Bevilacqua La Masa” – Segnalato – Acquisto Comune di Venezia 5 Ottobre 1963.
 24. Concorso Internazionale del Bronzetto 1965 – Padova
 25. Premio VIII Centenario di San Francesco 1982.
-26. Mostra personale, Galleria San Vidal “Premio San Vidal”, U.C.A.I. II0 Edizione d’Arte Sacra per la casa, ricevimento premio e acquisto, assegnato al segretario della gioventù 1966
+26. Mostra personale, Galleria San Vidal “Premio San Vidal”, U.C.A.I. II° Edizione d’Arte Sacra per la casa, ricevimento premio e acquisto, assegnato al segretario della gioventù 1966
 27. Associazione Diplomati Accademia Belle Arti di Venezia 1970.
 28. Allegato al questionario biografico per il Dictionary Of International Biography
 
@@ -62,30 +64,31 @@ Sue opere figurano nelle seguenti Gallerie e Collezioni:
 - Collezione Ferruccio Asta – Venezia – una scultura
 - Collezione Comm. Giorgio Cecato (Pastorelli di Fatima)
 - Collezione Dott. Frattina – Venezia – n. 1 disegno
-- Italico Bras – Venezia – n. 1 scultura
+- Dott. Italico Bras – Venezia – n. 1 scultura
 - Carrain – Venezia – n. 1 disegno
-- Giulio Meneghetti – Padova – n.l scultura e n. 3 disegni
-- Aldo Zannini – Nizza Monferrato – n.2 disegni e n. 2 acqueforti.
+- Dott. Giulio Meneghetti – Padova – n.1 scultura e n. 3 disegni
+- Dott. Aldo Zannini – Nizza Monferrato – n.2 disegni e n. 2 acqueforti.
 - Comune di Venezia – ritratto Fulvia – bronzo del 1939
 - Galleria Ettore Gianferrari – Venezia – bronzo
 - Galleria Sandri – Venezia – Deposizione – terracotta
 - Conte Volpi di Misurata – Venezia – una terracotta 1940
-- Eugenio Zannini – Padova – n.4 terracotta e n. 3 bronzi.
-- Rosi Barba Fratini – San Paolo del Brasile – n.l scultura
+- Prof. Eugenio Zannini – Padova – n.4 terracotte e n. 3 bronzi.
+- Rosi Borba Fratini – San Paolo del Brasile – n.1 scultura
 - Comune di Venezia – bronzo – Trofeo premio alla Mostra Biennale di Venezia 1941
-- Romano – Venezia – n. Terracotta (la sonambola)
-- Walter Marini Giorgio – terracotta del 1942 Risveglio, la sfinge, chiaro di luna
-- Galleria d’Arte Internazionale Moderna n. 2 sculture Venezia
+- Dott. Romano – Venezia – n. 1 terracotta (la sonambola)
+- Ing. Walter Marini Giorgio – terracotta del 1942 Risveglio, la sfinge, chiaro di luna
+- Galleria d’Arte Internazionale Moderna – Venezia – n. 2 sculture
 - Galleria d’Arte Moderna – Cà Pesaro – Venezia – omaggio alla partigiana undici disegni a matita e alcuni ritratti
 - Cassa di Risparmio – Agenzia n. 1,14 – pannelli in argento sbalzato
 - Sovraintendenza alle Belle Arti – Venezia – terracotta – contemplazione
-- Galleria Internazionale d’Arte – bronzo, nudino 1944 Duca D’Aosta – Campo san Felice – Venezia – una scultura in pietra d’Istria – Amanti a Venezia, un grande bassorilievo in rame sbalzato (storia della caccia) – Venezia
-- Alfredo Zannini – Padova – Crocifissione – Terracotta
-- Lorenzo e Alda Ruzzante – Duna Fiorita (Caorle) – terracotta vetrinata – innamorati a Venezia
+- Galleria Internazionale d’Arte – bronzo, nudino 1944
+- Duca D’Aosta – Campo san Felice – Venezia – una scultura in pietra d’Istria – Amanti a Venezia, un grande bassorilievo in rame sbalzato (storia della caccia) – Venezia
+- Dott. Alfredo Zannini – Padova – Crocifissione – Terracotta
+- Rag. Lorenzo e Alda Ruzzante – Duna Fiorita (Caorle) – terracotta vetrinata – innamorati a Venezia
 - Stabilimento I.L.V.A. Marghera – Venezia – bronzo bassorilievo – deposizione
 - Monsignor Prof. Don Ilario Quntarelli – Venezia – una scultura in legno (Annunciazione del 1955)
 - Cassa di Risparmio sede centrale – S. Luca – due bassorilievi, in rame e ottone sbalzati con elementi in oro e argento
-- San Paolo del Brasile – Collezione Rosi Frontini – bassorilievo n terracotta (resurrezione della carne)
+- San Paolo del Brasile – Collezione Rosi Frontini – bassorilievo in terracotta (resurrezione della carne)
 
 **Importanti opere eseguite per edifici pubblici e religiosi si trovano a Venezia oltre quelli soprannominati:**
 
@@ -96,15 +99,15 @@ Sue opere figurano nelle seguenti Gallerie e Collezioni:
 - Chiesa di San Luca statua di “Santa Rita” in marmo bianco di Carrara.
 - Chiesa di San Simeone Profeta, statua di San Giovanni Battista” in bronzo, statua di “S. Antonio” in legno di Mansonia.
 - Murano (Venezia) Chiesa di San Pietro Martire, statua di “Maria” in legno del 1953.
-- Burano (Venezia) Nuova Scuola Media, statua   in bronzo “le scolare” mt. O.BO X 0.40 X 2.00
+- Burano (Venezia) Nuova Scuola Media, statua   in bronzo “le scolare” mt. 0.80 X 0.40 X 2.00
 - Marghera (Venezia) Piazzale Cà Emiliani, grande gruppo scultoreo in pietra di Verona mt. 3 X 3 X 8
 - Chiesa San Michele, Tabernacolo in argento e rame sbalzati Grande “Crocifisso” in legno Arquà 1948.
 - Stabilimento ILVA Marghera (VE)- bassorilievo in bronzo mt. 1.00 X 1.50 – 1948
-- Lido di Venezia – Chiesa di San Camillo “Statua di Maria” in bronzo mt. 0.40 X 0- 40 X 1.20
+- Lido di Venezia – Chiesa di San Camillo “Statua di Maria” in bronzo mt. 0.40 X 0.40 X 1.20
 - Chiesa di San Antonio al Lido di Venezia – scultura in marmo – deposizione.
 - Stadio sportivo di S. Elena – Venezia – un bassorilievo in pietra d’Istria. In memoria dei caduti di Superga.
 - Chiesa Cà Bianca, statua di “Maria” in legno di Mansonia mt. 0.60 X 0.40 X 1.00
-- Mestre (Venezia) Villaggio Sartori – “San Giovanni Battista” in bronzo con fonte battesimale in rame,                (Cimitero            di            Mestre Venezia – lavori ordinati dal Comune di Mestre – Venezia – per la sistemazione del cimitero stesso) – due grandi bassorilievi in pietra d’Istria mt. 3.50 X   50, un “Crocefisso” in bronzo mt. 1.80 X 1.80, quattro bassorilievi in pietra d’Istria mt. 0.90 X 2.60 a decorazione della cella mortuaria.
+- Mestre (Venezia) Villaggio Sartori – “San Giovanni Battista” in bronzo con fonte battesimale in rame,                (Cimitero            di            Mestre Venezia – lavori ordinati dal Comune di Mestre – Venezia – per la sistemazione del cimitero stesso) – due grandi bassorilievi in pietra d’Istria mt. 3.50 X 1.50, un “Crocefisso” in bronzo mt. 1.80 X 1.80, quattro bassorilievi in pietra d’Istria mt. 0.90 X 2.60 a decorazione della cella mortuaria.
 - Jesolo (Venezia) – Cimitero – lavori ordinati dal Comune per la sistemazione del cimitero; Due statue in bronzetto di Verona “Redentore”, “Deposizione” m. 1.50 X m. 0.70 X m. 2.00 /
 - Diocesi di Trento – 6 statue in bronzo argentato, raffiguranti S.Tarcisio, S. Francesco, S. Chiara, San Tommaso D’Aquino, Santa Caterina., San Pio X e un crocefisso d’altare Opere commissionate    dal rev.mo          Don Giovanni     Battista Mezzi della diocesi di Trento 1959.
 - Quarto D’Altino (Venezia), chiesa di San Michele (campanile) Statua in acciaio inox sbalzato m. 0.80 X m. 0.80 X m. 4.00.
@@ -124,7 +127,7 @@ Sue opere figurano nelle seguenti Gallerie e Collezioni:
 
 ## Il curriculum originale
 
-Le pagine del curriculum dattiloscritto da cui è tratto il testo di questa pagina.
+Le pagine del curriculum dattiloscritto da cui è tratto il testo di questa pagina. Le ultime due pagine contengono parti che il testo qui sopra non riporta: la loro trascrizione è sotto le immagini.
 
 ![Curriculum dattiloscritto, pagina 1](../../assets/uploads/2019/09/curriculum_0001.jpg)
 
@@ -144,4 +147,30 @@ Le pagine del curriculum dattiloscritto da cui è tratto il testo di questa pagi
 
 ![Curriculum dattiloscritto, pagina 9](../../assets/uploads/2019/09/curriculum_0009.jpg)
 
+<details class="trascrizione">
+<summary>Trascrizione</summary>
+
+*La prima parte della pagina (fine dell’elenco delle opere per edifici pubblici e religiosi) è riportata sopra. Segue il testo che non compare nel curriculum pubblicato.*
+
+Oltre ad essersi interessata la Radio, la Televisione italiana sono apparsi articoli in: il "Gazzettino di Venezia", "La Voce di San Marco", "La Gazzetta delle Arti", "Minosse", "Il Risorgimento", "Venezia Notte", "L'Avvenire d'Italia", "La Voce del popolo", "Neue Berner", "Zeitng", "Il Piccolo", "L'Araldo dell'Arte", "Lo Stile", "Domus", "Arte Valore", "Tre Venezie", "La nuova Critica Europea - Editore Bugatti", "Pittori Italiani Contemporanei" - Editore il Centauro, "Enciclopedia Internazionale degli Artisti, Editore Bugatti, "Catalogo Nazionale Bolaffi d'Arte Moderna", "Catalogo della Grafica Italiana Moderna", "L'Eco della Riviera", "Il Resto del carlino", "L'Unità", l'Adige", "Gazzettino Sera", "Veneto Liberale", "Il Nuovo Risorgimento", "Giornale di brescia", "La Voce Repubblicana", "Il Gazzettino illustrato", "La difesa del popolo", ""Kleine Zeitung", Kartner Osttirol", "Gente Veneta", "Il Diario", "El Godega", "La Vernice", "Odeon", "Religiosità dell'Arte", "L'Italia", "Rivista d'Arte e Valori i veri artisti contemporanei", "cose nostre giornale di grigno".
+
+Tra i critici che hanno parlato e scritto di lui (Romanelli) vanno citati:
+
+Manlio Alzetta, Silvio Branzi, Marzio Bugatti, Giacomo Caramel, Ugo Fasolo, Teo Giannotti, Cesare Guglielmo, Gigli, Roberto Joos, Bepi Mazzariol, Grete Misar, Umberto Morucchio, Liliana Muti, Lori Müller, Philips Pastyrik, Guido Perocco, Francesco Bontempelli, Paolo Rizzi, M. Rizzoli, T.
+
+</details>
+
 ![Curriculum dattiloscritto, pagina 10](../../assets/uploads/2019/09/curriculum_0010.jpg)
+
+<details class="trascrizione">
+<summary>Trascrizione</summary>
+
+Roffaeré, A. Scheiwegg, Franco Solmi, Mario Stefani, Gigi Scarpa, G. Tansini, Leila Uritker, Orio Vidolini, G. Zaugg, Dr. Leiler, Toni Toniato, Giovanni Mariacher, Fraccalini, F. Burzotta, Di Blasi, A. D'Este, Gazzardi, Mario Ancona, Carlo della Corte, Carlo 'galasso, Virgilio Guidi, Dino Formaggio, E. De Martini, Giulio Gasparotti, Walter Nowoty, Giorgio Dal Bò, Mons. Ilario Quntarelli, Giorgio Segato, Laura Sesler, Gheno.
+
+Per finire cito le parole che scrive di lui (Romanelli) il pittore Virgilio Guidi "Fra le righe" (Come Martini, Romanelli è un operaio che non si veste a festa con abiti provvisori).
+
+Ha conoscenza formidabile di tutte le materie che adopera, conosce tutti i marmi e le pietre della Versiglia, incide sulla pietra come un incisore su lastra di zinco e qui bisogna dire che la sua produzione grafica è enorme e sapientissima.
+
+Il discorso sarebbe lungo: dico solo che bisogna riconoscere ormai la misura che è possibile chiamare (Romanelliana).
+
+</details>
