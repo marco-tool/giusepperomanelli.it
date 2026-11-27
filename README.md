@@ -46,6 +46,7 @@ Workflow manuale `Deploy su Aruba` (GitHub Actions). Secret richiesti nel reposi
 
 - Il catalogo opere (316 schede, `fonte: "libreria 2019"`) viene dalle 415 foto caricate nel 2019 nella libreria media di WordPress (cartelle `uploads/Opere/<Materiale>/`) e mai pubblicate. Anno, tecnica e titolo sono letti dai nomi dei file: vedi `archivio/recupero-2026/catalogo-parsing.csv` per la corrispondenza foto → scheda e `catalogo.py` per le regole.
 - Le schede hanno `da_completare: true`: misure, collocazione e descrizioni vanno aggiunte a mano.
+- Ogni immagine della libreria WordPress (559 visibili) è classificata in `archivio/recupero-2026/contabilita-libreria.csv`: 513 nel sito, 31 doppioni, 15 scartate con motivo. Altre 70 immagini risultano nella libreria ma non sono leggibili dall'esterno (allegati di bozze o pagine private): saranno nel backup FTP di `wp-content/uploads`.
 - Link esterni non più attivi (ASAC Biennale, Quadriennale, pagina di Manlio Alzetta) puntano a copie su archive.org: dettagli in `archivio/recupero-2026/link-esterni.json`.
 
 - Testi e 93 immagini recuperati dal sito pubblico e dalla REST API di WordPress.
