@@ -1,0 +1,56 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+const { title, description = 'Giuseppe Romanelli (Venezia 1916–1982), scultore. Biografia, opere, mostre e opere pubbliche.' } = Astro.props;
+const fullTitle = title ? `${title} | Giuseppe Romanelli` : 'Giuseppe Romanelli | Scultore';
+const path = Astro.url.pathname;
+const menu = [
+  ['/biografia/', 'Biografia'],
+  ['/curriculum/', 'Curriculum'],
+  ['/opere/', 'Opere'],
+  ['/opere-pubbliche/', 'Opere pubbliche'],
+  ['/mostre/', 'Mostre'],
+  ['/contatti/', 'Contatti'],
+];
+---
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={new URL(path, Astro.site)} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/">
+        <span class="brand-name">Giuseppe Romanelli</span>
+        <span class="brand-sub">scultore · Venezia 1916–1982</span>
+      </a>
+      <details class="nav-mobile">
+        <summary>Menu</summary>
+        <nav>
+          {menu.map(([href, label]) => <a href={href} aria-current={path.startsWith(href) ? 'page' : undefined}>{label}</a>)}
+        </nav>
+      </details>
+      <nav class="nav-desktop">
+        {menu.map(([href, label]) => <a href={href} aria-current={path.startsWith(href) ? 'page' : undefined}>{label}</a>)}
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <p>© Famiglia Romanelli. Tutto il materiale pubblicato è di proprietà della famiglia dell'artista: per utilizzarlo è richiesto il consenso esplicito.</p>
+      <p><a href="/contatti/">Contatti</a> · <a href="/credits/">Credits</a></p>
+    </footer>
+  </body>
+</html>

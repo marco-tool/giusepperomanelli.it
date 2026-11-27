@@ -1,0 +1,31 @@
+---
+import { getCollection, render } from 'astro:content';
+import { Image } from 'astro:assets';
+import Base from '../../layouts/Base.astro';
+import { CATEGORIE } from '../../categorie';
+
+export async function getStaticPaths() {
+  const opere = await getCollection('opere');
+  return opere.map((o) => ({ params: { slug: o.id }, props: { o } }));
+}
+const { o } = Astro.props;
+const { Content } = await render(o);
+const d = o.data;
+---
+<Base title={d.title}>
+  <a class="back" href={`/opere/${d.categoria}/`}>← {CATEGORIE[d.categoria]}</a>
+  <div class="opera">
+    <div class="images">
+      {d.immagini.map((img, i) => <Image src={img} alt={`${d.title}${i ? ` (${i + 1})` : ''}`} widths={[700, 1200, 1800]} sizes="(max-width: 800px) 100vw, 700px" loading={i ? 'lazy' : 'eager'} />)}
+    </div>
+    <div>
+      <h1 class="page-title">{d.title}</h1>
+      <dl>
+        {d.anno && <><dt>Anno</dt><dd>{d.anno}</dd></>}
+        {d.materiale && <><dt>Materiale</dt><dd>{d.materiale}</dd></>}
+        {d.dimensioni && <><dt>Dimensioni</dt><dd>{d.dimensioni}</dd></>}
+      </dl>
+      <div class="prose"><Content /></div>
+    </div>
+  </div>
+</Base>

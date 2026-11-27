@@ -1,0 +1,20 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+// Pagina di dettaglio solo per le mostre con testo o foto
+export async function getStaticPaths() {
+  const mostre = await getCollection('mostre', (m) => (m.body ?? '').trim().length > 0);
+  return mostre.map((m) => ({ params: { slug: m.id }, props: { m } }));
+}
+const { m } = Astro.props;
+const { Content } = await render(m);
+---
+<Base title={m.data.title}>
+  <article class="prose captions">
+    <a class="back" href="/mostre/">← Tutte le mostre</a>
+    <span class="eyebrow">{m.data.luogo}</span>
+    <h1>{m.data.title}</h1>
+    <Content />
+  </article>
+</Base>

@@ -1,0 +1,30 @@
+---
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import Base from '../../layouts/Base.astro';
+import { CATEGORIE, type Categoria } from '../../categorie';
+
+// Si genera una pagina solo per le categorie che contengono almeno un'opera
+export async function getStaticPaths() {
+  const opere = await getCollection('opere');
+  return (Object.keys(CATEGORIE) as Categoria[])
+    .filter((k) => opere.some((o) => o.data.categoria === k))
+    .map((k) => ({ params: { categoria: k }, props: { opere: opere.filter((o) => o.data.categoria === k) } }));
+}
+const { opere } = Astro.props;
+const label = CATEGORIE[Astro.params.categoria as Categoria];
+---
+<Base title={label}>
+  <a class="back" href="/opere/">← Tutte le opere</a>
+  <h1 class="page-title">{label}</h1>
+  <p class="lead">{opere.length} {opere.length === 1 ? 'opera' : 'opere'}</p>
+  <div class="grid">
+    {opere.map((o) => (
+      <a class="work" href={`/opera/${o.id}/`}>
+        <div class="frame"><Image src={o.data.immagini[0]} alt={o.data.title} widths={[300, 600]} sizes="300px" /></div>
+        <h3>{o.data.title}</h3>
+        <p>{[o.data.anno, o.data.materiale].filter(Boolean).join(' · ')}</p>
+      </a>
+    ))}
+  </div>
+</Base>

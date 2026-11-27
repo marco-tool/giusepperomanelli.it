@@ -1,0 +1,12 @@
+# Aruba (Apache): pagina 404 e cache lunga per le risorse con hash nel nome
+ErrorDocument 404 /404.html
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType text/css "access plus 1 year"
+</IfModule>
+<IfModule mod_headers.c>
+  <FilesMatch "^.*\.(webp|css)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>

@@ -1,0 +1,39 @@
+---
+import { getEntry, render } from 'astro:content';
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import ritratto from '../assets/uploads/2019/05/giuseppe-romanelli.jpg';
+import imgOpere from '../assets/uploads/2019/05/giuseppe-romanelli-opere.jpg';
+import imgMostre from '../assets/uploads/2019/05/giuseppe-romanelli-mostre.jpg';
+import imgPubbliche from '../assets/uploads/2019/10/madonna_fatima_3.jpg';
+
+const home = await getEntry('pagine', 'home');
+const { Content } = await render(home!);
+---
+<Base>
+  <section class="hero">
+    <Image src={ritratto} alt="Giuseppe Romanelli a Venezia, sul Canal Grande" widths={[640, 1000, 1600]} sizes="(max-width: 800px) 100vw, 640px" loading="eager" />
+    <div>
+      <span class="eyebrow">Scultore · Venezia 1916–1982</span>
+      <h1>Giuseppe Romanelli</h1>
+      <div class="intro"><Content /></div>
+    </div>
+  </section>
+  <section class="sections">
+    <a class="card" href="/opere/">
+      <Image src={imgOpere} alt="Scultura di Giuseppe Romanelli" widths={[400, 800]} sizes="(max-width: 800px) 100vw, 380px" />
+      <h2>Opere</h2>
+      <p>Una selezione delle sculture, in corso di catalogazione.</p>
+    </a>
+    <a class="card" href="/mostre/">
+      <Image src={imgMostre} alt="Catalogo di una mostra di Giuseppe Romanelli" widths={[400, 800]} sizes="(max-width: 800px) 100vw, 380px" />
+      <h2>Mostre</h2>
+      <p>Dalle Biennali di Venezia alle personali in Italia e all'estero.</p>
+    </a>
+    <a class="card" href="/opere-pubbliche/">
+      <Image src={imgPubbliche} alt="Madonna di Fatima, Marghera" widths={[400, 800]} sizes="(max-width: 800px) 100vw, 380px" />
+      <h2>Opere pubbliche</h2>
+      <p>Chiese, scuole e spazi pubblici del Veneto e non solo.</p>
+    </a>
+  </section>
+</Base>
