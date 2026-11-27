@@ -75,7 +75,8 @@ main { max-width: var(--w); margin: 0 auto; padding: 48px 24px 80px; }
 .trascrizione th, .trascrizione td { text-align: left; padding: 4px 10px 4px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
 .trascrizione th { font-family: var(--sans); font-weight: normal; font-size: 0.78rem; color: var(--muted); }
 .trascrizione td:first-child, .trascrizione th:first-child { text-align: right; color: var(--muted); width: 2.4em; }
-.trascrizione td:last-child { white-space: nowrap; }
+.trascrizione td:last-child { min-width: 7.5em; }
+.trascrizione td { overflow-wrap: anywhere; }
 .prose ul { padding-left: 1.2em; }
 .prose li { margin: 0.35em 0; }
 
