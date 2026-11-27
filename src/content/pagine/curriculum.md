@@ -4,7 +4,7 @@ title: "Curriculum"
 
 ![Giuseppe Romanelli](../../assets/uploads/2019/09/IMG_0006-1.jpg)
 
-Giuseppe Romanelli scolpisce e disegna da quando, ancora bambino, imparava i primi segreti tecnici nella bottega di un severo scalpellino e contemporaneamente studiava all’istituto d’Arte dei Carmini (Venezia) dove si è diplomato, poi  il Magistero e all’Accademia delle Belle Arti di Venezia, sotto la guida dei Maestri Belletto, Baglioni e Martini.
+Giuseppe Romanelli scolpisce e disegna da quando, ancora bambino, imparava i primi segreti tecnici nella bottega di un severo scalpellino e contemporaneamente studiava all’istituto d’Arte dei Carmini (Venezia) dove si è diplomato, poi  il Magistero e all’Accademia delle Belle Arti di Venezia, sotto la guida dei Maestri Bellotto, Baglioni e Martini.
 
 Molto importante è per lui l’incontro con Arturo Martini, incide molto sulla sua formazione.
 
