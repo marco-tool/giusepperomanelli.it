@@ -64,6 +64,18 @@ main { max-width: var(--w); margin: 0 auto; padding: 48px 24px 80px; }
 .prose p:has(> img) { margin: 0; }
 /* Didascalie: solo nelle pagine che le usano (mostre, opere pubbliche) */
 .captions p:has(> img) + p:not(:has(img)) { font-size: 0.95rem; text-align: center; font-style: italic; color: var(--muted); margin-top: 4px; }
+/* Trascrizioni delle pagine di brochure e opuscoli (mostre) */
+.trascrizione { margin: 4px 0 36px; font-size: 1rem; line-height: 1.6; }
+.trascrizione summary { cursor: pointer; font-family: var(--sans); font-size: 0.85rem; color: var(--accent); text-align: center; padding: 6px 0; }
+.trascrizione summary:hover { color: var(--ink); }
+.trascrizione[open] { border-bottom: 1px solid var(--line); padding-bottom: 8px; }
+.trascrizione[open] summary { margin-bottom: 12px; border-bottom: 1px solid var(--line); padding-bottom: 10px; }
+.trascrizione p { margin: 0 0 0.9em; }
+.trascrizione table { border-collapse: collapse; width: 100%; font-size: 0.95rem; margin-bottom: 0.9em; }
+.trascrizione th, .trascrizione td { text-align: left; padding: 4px 10px 4px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+.trascrizione th { font-family: var(--sans); font-weight: normal; font-size: 0.78rem; color: var(--muted); }
+.trascrizione td:first-child, .trascrizione th:first-child { text-align: right; color: var(--muted); width: 2.4em; }
+.trascrizione td:last-child { white-space: nowrap; }
 .prose ul { padding-left: 1.2em; }
 .prose li { margin: 0.35em 0; }
 
