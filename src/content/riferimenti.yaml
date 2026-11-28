@@ -33,6 +33,7 @@
   fonte: Dizionario d’arte Sartori
   descrizione: "Scultore, disegnatore e incisore. Registra la partecipazione alla VI Mostra italiana di arte sacra per la casa cristiana (Milano, Angelicum, aprile-maggio 1950) con una Crocifissione."
   url: https://dizionariodartesartori.it/artisti/romanelli-giuseppe
+  sul_sito: { etichetta: Curriculum, url: /curriculum/ }
 
 - id: beweb
   gruppo: enciclopedie
@@ -138,6 +139,7 @@
   url: https://polovea.sebina.it/SebinaOpac/resource/momenti-piu-di-scultura-e-grafica-giuseppe-romanelli-scultore-salone-autopiu-padova-dal-18-aprile-al/VEA01557052
   altri:
     - { etichetta: "pieghevole digitalizzato (Università di Padova, raccolta Dalla Zorza)", url: "https://phaidra.cab.unipd.it/detail/o:434665?mode=full" }
+  sul_sito: { etichetta: Curriculum, url: /curriculum/ }
 
 # Altre presenze in rete
 - id: facebook
@@ -162,6 +164,7 @@
   fonte: "Catalogo della mostra, Berna, Galerie Haudenschild & Laubscher, 15 marzo-15 maggio"
   anno: "1968"
   descrizione: ""
+  sul_sito: { etichetta: Curriculum, url: /curriculum/ }
 
 - id: caramel-1970
   gruppo: stampa

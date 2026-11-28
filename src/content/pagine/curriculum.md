@@ -126,6 +126,14 @@ Sue opere figurano nelle seguenti Gallerie e Collezioni:
 - Aya (Olanda), Museo Reale Numismatico, medaglia in bronzo “La Flagellazione” del   1940;
 - Rio De Janeiro, bassorilievo in terracotta.
 
+## Altre mostre documentate
+
+*Queste mostre non compaiono nel curriculum dattiloscritto. Sono documentate da cataloghi, pieghevoli e repertori trovati nel 2026: le fonti sono nella pagina [Riferimenti](/riferimenti/).*
+
+- Milano, Angelicum, aprile-maggio 1950: VI Mostra italiana di arte sacra per la casa cristiana, con la scultura *Crocifissione*. Fonte: Dizionario d’arte Sartori, dal catalogo della mostra (p. 25).
+- Berna (Svizzera), Galerie Haudenschild & Laubscher, 15 marzo-15 maggio 1968: *Deux artistes vénitiens*, mostra a due con il pittore Domenico Boscolo. Fonte: catalogo della mostra, citato nella voce di Wikipedia.
+- Padova, Salone Autopiù, 18 aprile-4 maggio 1974: *Momenti più di scultura e grafica*, mostra di sculture e grafica di Romanelli. Fonte: pieghevole della mostra, conservato nelle biblioteche di Venezia e all’Università di Padova.
+
 ## Il curriculum originale
 
 Le pagine del curriculum dattiloscritto da cui è tratto il testo di questa pagina. Le ultime due pagine contengono parti che il testo qui sopra non riporta: la loro trascrizione è sotto le immagini.
