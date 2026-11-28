@@ -9,4 +9,4 @@ fonte: "libreria 2019"
 da_completare: true
 ---
 
-La foto era nella cartella dei bronzi, ma il nome del file indicava «terracotta».
+Lo stesso soggetto esiste anche in bronzo: [La cieca, 1943](/opera/1943-bronzo-la-cieca/). Secondo la famiglia, alcuni bronzi di Romanelli sono fusioni a cera persa, altri sono stati ricavati dalle terracotte, che quindi esistono anch’esse.

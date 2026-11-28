@@ -11,4 +11,4 @@ fonte: "libreria 2019"
 da_completare: true
 ---
 
-Collocazione: Scuola Media di Bassano del Grappa, secondo la brochure della mostra del 1968 (nella biografia: «Studentesse», Scuola Media «Stefanini», Bassano del Grappa). Il curriculum dattiloscritto indica invece la Nuova Scuola Media di Burano.
+Collocazione: Scuola Media di Bassano del Grappa, come indicano la brochure della mostra del 1968 e la famiglia (nella biografia: «Studentesse», Scuola Media «Stefanini», Bassano del Grappa). Il curriculum dattiloscritto la colloca alla Nuova Scuola Media di Burano: per quella scuola Romanelli vinse un concorso, ma l’opera, in rame sbalzato a tutto tondo, è rimasta alla famiglia.

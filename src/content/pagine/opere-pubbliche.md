@@ -34,7 +34,8 @@ La lista delle seguenti opere pubbliche è tratta da uno dei suoi ultimi Curricu
 - Chiesa di San Luca statua di “Santa Rita” in marmo bianco di Carrara.
 - Chiesa di San Simeone Profeta, statua di San Giovanni Battista” in bronzo, statua di “S. Antonio” in legno di Mansonia.
 - Murano (Venezia) Chiesa di San Pietro Martire, statua di “Maria” in legno del 1953.
-- Burano (Venezia) Nuova Scuola Media, statua   in bronzo “le scolare” mt. O.BO X 0.40 X 2.00
+- Burano (Venezia) Nuova Scuola Media, statua   in bronzo “le scolare” mt. O.BO X 0.40 X 2.00  
+  *Nota della famiglia: «Le scolare» in bronzo è a Bassano del Grappa. Per la scuola di Burano Romanelli vinse un concorso; l’opera, in rame sbalzato a tutto tondo, è rimasta alla famiglia.*
 - Marghera (Venezia) Piazzale Cà Emiliani, grande gruppo scultoreo in pietra di Verona mt. 3 X 3 X 8
 - Chiesa San Michele, Tabernacolo in argento e rame sbalzati Grande “Crocifisso” in legno Arquà 1948.
 - Stabilimento ILVA Marghera (VE)- bassorilievo in bronzo mt. 1.00 X 1.50 – 1948
