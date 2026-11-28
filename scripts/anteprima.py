@@ -18,7 +18,7 @@ def pref(u: str) -> str:
 
 
 FASCIA = (
-    '<div style="background:#1f1d1a;color:#f6f3ee;font:14px/1.4 -apple-system,Segoe UI,Helvetica,Arial,sans-serif;'
+    '<div style="background:#17223a;color:#f4f1ea;font:14px/1.4 -apple-system,Segoe UI,Helvetica,Arial,sans-serif;'
     'padding:8px 16px;text-align:center">Anteprima del nuovo sito giusepperomanelli.it: non ancora online</div>'
 )
 

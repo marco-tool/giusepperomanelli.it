@@ -1,11 +1,15 @@
 :root {
-  --paper: #f6f3ee;
-  --ink: #1f1d1a;
-  --muted: #6b655c;
-  --line: #d9d3c8;
-  --accent: #7a3e2b;
-  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
-  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  /* Tema "Laguna" (scelto da Marco il 28/11/2026): carta, blu inchiostro, rosso veneziano */
+  --paper: #f4f1ea;
+  --ink: #17223a;
+  --muted: #5a6476;
+  --line: #d6d2c8;
+  --accent: #9e2f22;
+  --frame: #e9e5dc;
+  /* Caratteri pubblicati con il sito (pacchetti @fontsource), niente Google Fonts */
+  --display: "Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
+  --serif: "Source Serif 4", Georgia, serif;
+  --sans: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   --w: 1180px;
   --text: 680px;
 }
@@ -16,7 +20,7 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--serif);
-  font-size: 1.125rem;
+  font-size: 1.08rem;
   line-height: 1.65;
 }
 img { max-width: 100%; height: auto; display: block; }
@@ -104,7 +108,7 @@ main { max-width: var(--w); margin: 0 auto; padding: 48px 24px 80px; }
 /* Griglia opere */
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 32px 28px; }
 .work { text-decoration: none; color: var(--ink); }
-.work .frame { background: #ebe6dd; aspect-ratio: 1; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.work .frame { background: var(--frame); aspect-ratio: 1; display: flex; align-items: center; justify-content: center; overflow: hidden; }
 .work .frame img { max-height: 100%; width: auto; object-fit: contain; }
 .work h3 { font-weight: normal; font-size: 1.15rem; margin: 10px 0 0; }
 .work p { margin: 0; color: var(--muted); font-size: 0.95rem; }
@@ -135,13 +139,16 @@ main { max-width: var(--w); margin: 0 auto; padding: 48px 24px 80px; }
 .site-footer p { margin: 0 0 6px; max-width: 760px; }
 .site-footer a { color: var(--muted); }
 
+/* Titoli in Bodoni */
+.brand-name, .page-title, .prose h1, .prose h2, .hero h1, .card h2, .cat h2, .altre h2, .timeline .year { font-family: var(--display); }
+
 .altre { margin-top: 72px; border-top: 1px solid var(--line); padding-top: 32px; }
 .altre h2 { font-weight: normal; font-size: 1.4rem; margin: 0 0 24px; }
 
 /* Indice categorie */
 .cats { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 36px 28px; }
 .cat { text-decoration: none; color: var(--ink); }
-.cat .frame { aspect-ratio: 4 / 3; overflow: hidden; background: #ebe6dd; }
+.cat .frame { aspect-ratio: 4 / 3; overflow: hidden; background: var(--frame); }
 .cat .frame img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
 .cat:hover .frame img { transform: scale(1.02); }
 .cat h2 { font-weight: normal; font-size: 1.4rem; margin: 12px 0 2px; }
