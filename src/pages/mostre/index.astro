@@ -23,6 +23,7 @@ const testo = (t: string) => t.replace(/^\d{4},\s*/, '');
         <span class="what">
           {conPagina(m) ? <a href={`/mostre/${m.id}/`}>{testo(m.data.title)}</a> : testo(m.data.title)}
           {m.data.luogo && <small>{m.data.luogo}</small>}
+          {m.data.fonte && <small class="fonte">Fonte: {m.data.fonte} (<a href="/riferimenti/">Riferimenti</a>)</small>}
         </span>
         <span class="thumb">{m.data.copertina && <a href={`/mostre/${m.id}/`} tabindex="-1"><Image src={m.data.copertina} alt={`Opuscolo della mostra del ${m.data.data.getFullYear()}${m.data.luogo ? `, ${m.data.luogo}` : ''}`} width={220} /></a>}</span>
       </li>

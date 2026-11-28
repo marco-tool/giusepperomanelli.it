@@ -1,6 +1,6 @@
 ---
 title: "Mostre"
-descrizione: "Le mostre di Giuseppe Romanelli dal 1937 al 1982: Biennale di Venezia, Quadriennale di Roma e personali in Italia e in Austria, con opuscoli e testi critici."
+descrizione: "Le mostre di Giuseppe Romanelli dal 1937 al 1982: Biennale di Venezia, Quadriennale di Roma e mostre in Italia, Austria e Svizzera, con opuscoli e testi critici."
 ---
 
 ![Giuseppe Romanelli a una sua mostra, accanto a una scultura in legno](../../assets/uploads/2019/08/IMG_0004.jpg)

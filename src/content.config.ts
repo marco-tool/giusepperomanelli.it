@@ -29,6 +29,8 @@ const mostre = defineCollection({
       // true se "data" è solo un segnaposto per l'anno
       solo_anno: z.boolean().default(false),
       descrizione: z.string().optional(),
+      // mostra nota solo da fonti esterne (non dai materiali di famiglia): chi la documenta
+      fonte: z.string().optional(),
     }),
 });
 

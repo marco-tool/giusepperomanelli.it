@@ -209,3 +209,4 @@ main { max-width: var(--w); margin: 0 auto; padding: 48px 24px 80px; }
   .rif-indice a { white-space: nowrap; }
 }
 .rif-meta time { white-space: nowrap; }
+.timeline .what small.fonte { font-style: italic; margin-top: 2px; }
