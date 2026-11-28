@@ -1,0 +1,61 @@
+# Pubblica il sito su GitHub Pages a ogni modifica su main.
+#
+# MODALITA decide che cosa va online:
+#   anteprima  -> https://marco-tool.github.io/giusepperomanelli.it/ : indirizzi adattati alla sottocartella,
+#                 fascia "Anteprima", nessuna indicizzazione (scripts/anteprima.py)
+#   definitivo -> https://www.giusepperomanelli.it/ : il sito vero, indicizzabile, con i controlli di
+#                 scripts/controllo_definitivo.py (se un controllo fallisce, non si pubblica nulla)
+# Si passa a "definitivo" solo DOPO aver impostato il dominio personalizzato in Settings > Pages
+# (vedi archivio/passaggio-dominio.md). Da quel momento l'anteprima non esiste più.
+name: Pubblicazione su GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+env:
+  MODALITA: anteprima
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pubblicazione
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # storia completa (senza i file vecchi) per la data di ultimo aggiornamento in /riferimenti/
+          fetch-depth: 0
+          filter: blob:none
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Controlli del sito definitivo
+        run: python3 scripts/controllo_definitivo.py
+      - name: Adatta all'anteprima
+        if: env.MODALITA == 'anteprima'
+        run: python3 scripts/anteprima.py /giusepperomanelli.it
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

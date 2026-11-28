@@ -34,14 +34,18 @@ Una categoria compare nel sito solo quando contiene almeno un'opera.
 ```
 npm install
 npm run dev      # anteprima su http://localhost:4321
-npm run build    # genera dist/
+npm run build    # genera dist/ (sito definitivo, con le pagine di rimando)
+npm run controllo  # controlli sulla build prima della pubblicazione
 ```
 
 ## Pubblicazione
 
-- **Anteprima**: https://marco-tool.github.io/giusepperomanelli.it/ (GitHub Pages, workflow `Anteprima su GitHub Pages`, si aggiorna a ogni push su main, non indicizzata). `scripts/anteprima.py` adatta gli indirizzi alla sottocartella.
-- **Sito vero**: workflow manuale `Deploy su Aruba`. Secret: `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`, `FTP_SERVER_DIR` (cartella del sito sull'hosting).
-- **Backup del vecchio WordPress**: workflow manuale `Backup vecchio WordPress`, archivio cifrato con il secret `BACKUP_PASSWORD` (il repository è pubblico: gli artifact sono scaricabili da chiunque).
+- Workflow `Pubblicazione su GitHub Pages` (`.github/workflows/pubblica.yml`), a ogni push su main. La variabile `MODALITA` decide cosa va online:
+  - `anteprima` (oggi): https://marco-tool.github.io/giusepperomanelli.it/, con `scripts/anteprima.py` che adatta gli indirizzi alla sottocartella, aggiunge la fascia "Anteprima" e il noindex.
+  - `definitivo`: https://www.giusepperomanelli.it/, indicizzabile. Si attiva solo insieme al dominio personalizzato: vedi `archivio/passaggio-dominio.md`.
+- Ogni build passa da `scripts/controllo_definitivo.py` (`npm run controllo`): noindex, indirizzi dell'anteprima, canonical, robots.txt, sitemap, collegamenti interni rotti, dimensione. Se un controllo fallisce non si pubblica nulla.
+- Vecchi indirizzi del WordPress: `scripts/vecchi_indirizzi.py` li ricostruisce dall'export del database (che resta sul PC di Marco) e scrive `src/rimandi.json` e `archivio/recupero-2026/vecchi-indirizzi.csv`. In build, per ogni vecchio indirizzo che non esiste più, viene scritta una pagina di rimando (meta refresh a 0 secondi più canonical). Le pagine, le mostre e le 6 opere del vecchio portfolio hanno lo stesso indirizzo di prima.
+- Il deploy su Aruba via FTP e il workflow di backup sono stati tolti il 28/11/2026: backup fatto, il sito va su GitHub Pages. Se nel repository ci sono ancora i secret `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`, `FTP_SERVER_DIR`, `BACKUP_PASSWORD`, vanno cancellati (Settings > Secrets and variables > Actions).
 
 ## Note sul recupero dal vecchio WordPress (27/11/2026)
 

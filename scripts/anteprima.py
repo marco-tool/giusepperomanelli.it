@@ -28,6 +28,7 @@ for f in DIST.rglob("*.html"):
     s = re.sub(r'(\s(?:href|src|action|content)=")(/[^"]*)"', lambda m: m.group(1) + pref(m.group(2)) + '"', s)
     s = re.sub(r'srcset="([^"]*)"', lambda m: 'srcset="' + ", ".join(
         " ".join([pref(p.split()[0])] + p.split()[1:]) for p in m.group(1).split(",") if p.strip()) + '"', s)
+    s = re.sub(r'(content="\d+;\s*url=)(/[^"]*)"', lambda m: m.group(1) + pref(m.group(2)) + '"', s)  # pagine di rimando
     s = s.replace("<head>", '<head><meta name="robots" content="noindex, nofollow">', 1)
     s = re.sub(r"(<body[^>]*>)", r"\1" + FASCIA, s, count=1)
     f.write_text(s, encoding="utf-8"); n += 1
