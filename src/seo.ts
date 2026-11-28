@@ -28,6 +28,13 @@ export async function persona() {
     description: 'Scultore veneziano (1916–1982), allievo di Arturo Martini. Ha esposto alla Biennale di Venezia e alla Quadriennale di Roma.',
     image: await ogImage(),
     url: `${SITE}/`,
+    // Profili della stessa persona su altri siti (elenco completo in /riferimenti/)
+    sameAs: [
+      'https://it.wikipedia.org/wiki/Giuseppe_Romanelli',
+      'https://www.wikidata.org/wiki/Q3771340',
+      'https://www.beweb.chiesacattolica.it/personnes/personne/12946/Giuseppe+Romanelli',
+      'https://www.facebook.com/giusepperomanelliscultore/',
+    ],
   };
 }
 

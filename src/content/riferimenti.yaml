@@ -1,0 +1,193 @@
+# Pagine esterne che parlano di Giuseppe Romanelli (pagina /riferimenti/).
+# Un elemento = una fonte. Campi:
+#   gruppo       una delle sezioni della pagina (vedi src/pages/riferimenti.astro)
+#   titolo       titolo della pagina, dell'opera o del testo
+#   fonte        chi la pubblica (ente, rivista, autore)
+#   anno         facoltativo: anno della pubblicazione o della scheda
+#   descrizione  una o due frasi: cosa dice di Romanelli
+#   url          facoltativo: se manca, il testo è solo a stampa
+#   lingua       facoltativo: "in inglese", ecc.
+#   altri        facoltativo: altri collegamenti della stessa fonte
+#   sul_sito     facoltativo: pagina di questo sito collegata
+# Collegamenti aperti e controllati il 28/11/2026.
+
+# Enciclopedie e schede d'autore
+- id: wikipedia
+  gruppo: enciclopedie
+  titolo: Giuseppe Romanelli
+  fonte: Wikipedia in italiano
+  descrizione: "Voce biografica: studi all’Istituto d’arte e all’Accademia di Venezia, insegnamento, Biennali e Quadriennali, premi (Ca’ Pesaro 1940, Sanremo 1952, Concorso del bronzetto di Padova 1965), opere in collezioni pubbliche e bibliografia."
+  url: https://it.wikipedia.org/wiki/Giuseppe_Romanelli
+  sul_sito: { etichetta: Biografia, url: /biografia/ }
+
+- id: wikidata
+  gruppo: enciclopedie
+  titolo: Giuseppe Romanelli (Q3771340)
+  fonte: Wikidata
+  descrizione: "Scheda di dati strutturati: nascita e morte a Venezia, professione, identificativo nel Servizio bibliotecario nazionale. È la scheda da cui motori di ricerca e cataloghi riconoscono lo scultore."
+  url: https://www.wikidata.org/wiki/Q3771340
+
+- id: sartori
+  gruppo: enciclopedie
+  titolo: Romanelli Giuseppe
+  fonte: Dizionario d’arte Sartori
+  descrizione: "Scultore, disegnatore e incisore. Registra la partecipazione alla VI Mostra italiana di arte sacra per la casa cristiana (Milano, Angelicum, aprile-maggio 1950) con una Crocifissione."
+  url: https://dizionariodartesartori.it/artisti/romanelli-giuseppe
+
+- id: beweb
+  gruppo: enciclopedie
+  titolo: Giuseppe Romanelli, scultore
+  fonte: BeWeB, Beni ecclesiastici in web (Conferenza episcopale italiana)
+  descrizione: "Scheda d’autore nel censimento dei beni culturali delle diocesi italiane."
+  url: https://www.beweb.chiesacattolica.it/personnes/personne/12946/Giuseppe+Romanelli
+
+# Opere in musei, chiese e cataloghi pubblici
+- id: iccd-capesaro-bronzo
+  gruppo: opere
+  titolo: Figura femminile nuda seduta
+  fonte: Catalogo generale dei beni culturali (Ministero della cultura)
+  descrizione: "Bronzo fuso nelle collezioni di Ca’ Pesaro, Galleria internazionale d’arte moderna di Venezia, inventario S. 241."
+  url: https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0500439382
+  altri:
+    - { etichetta: scheda di catalogo completa, url: "https://sigecweb.beniculturali.it/sigec/item/print/ICCD5502511" }
+
+- id: capesaro-bagnante
+  gruppo: opere
+  titolo: Bagnante
+  fonte: Ca’ Pesaro, archivio del sito del museo
+  descrizione: "Grande figura femminile in gesso degli anni Cinquanta, nell’itinerario sulle sculture donate al museo. Il testo la lega alla figurazione e alle ricerche vicine allo Spazialismo."
+  url: https://archivio-capesaro.visitmuve.it/?p=765
+  lingua: in inglese
+
+- id: iccd-via-crucis
+  gruppo: opere
+  titolo: Via Crucis, chiesa di San Giuseppe di Castello
+  fonte: Catalogo generale dei beni culturali (Ministero della cultura)
+  descrizione: "Quattordici formelle in terracotta, 1957-1958 circa, nella chiesa di San Giuseppe di Castello a Venezia. Autore e data sono attribuiti dalla scheda su base stilistica."
+  url: https://sigecweb.beniculturali.it/sigec/item/print/ICCD2806188
+
+- id: gesu-lavoratore
+  gruppo: opere
+  titolo: Madonna di Fatima
+  fonte: Parrocchia di Gesù Lavoratore, Marghera
+  descrizione: "Pagina della parrocchia sulla statua della Madonna di Fatima, con fotografie."
+  url: https://www.gesulavoratore.it/madonna-di-fatima.php
+  sul_sito: { etichetta: Opere pubbliche, url: /opere-pubbliche/ }
+
+- id: capesaro-partigiana
+  gruppo: opere
+  titolo: "La partigiana veneta. Arte per la Resistenza"
+  fonte: Ca’ Pesaro, mostra del 2005
+  anno: "2005"
+  descrizione: "La mostra ha esposto i bozzetti del concorso del 1964 per il nuovo monumento alla Partigiana ai Giardini. Quello di Romanelli è citato, con quelli di Mascherini e Paganin, tra le proposte più stilizzate; vinse Augusto Murer."
+  url: https://archivio-capesaro.visitmuve.it/?p=838
+  lingua: in inglese
+
+# Archivi delle grandi mostre
+- id: asac
+  gruppo: archivi
+  titolo: Partecipazioni alla Biennale di Venezia
+  fonte: ASAC, Archivio storico delle arti contemporanee della Biennale
+  descrizione: "Le presenze di Romanelli alle Biennali dal 1940 al 1956. La banca dati originale non è più in rete: il collegamento apre la copia conservata da Internet Archive."
+  url: https://web.archive.org/web/20220626083013/http://asac.labiennale.org/it/passpres/artivisive/sem-ricerca.php?Spersona=377554
+  sul_sito: { etichetta: Mostre, url: /mostre/ }
+
+- id: quadriennale
+  gruppo: archivi
+  titolo: Scheda artista
+  fonte: ArBiQ, Archivio biblioteca della Quadriennale di Roma
+  descrizione: "Partecipazioni alla V, VI e VII Quadriennale. Anche qui il collegamento apre la copia conservata da Internet Archive."
+  url: https://web.archive.org/web/20241005181435/http://www.quadriennalediroma.org/arbiq_web/index.php?sezione=artisti&id=9683&ricerca=romanelli
+  sul_sito: { etichetta: Mostre, url: /mostre/ }
+
+# Studi e ricerche
+- id: valentini-2020
+  gruppo: studi
+  titolo: "La scultura alla Biennale di Venezia del 1950. Note di mercato e di critica dai registri di vendita e dalla coeva rassegna stampa"
+  fonte: "Nicola Valentini, Annali online dell’Università di Ferrara, Sezione Lettere, XV"
+  anno: "2020"
+  descrizione: "Romanelli compare tra gli scultori firmatari di una lettera di protesta alla Biennale del 1950 (note 21 e 28)."
+  url: https://doi.org/10.15160/1826-803X/2318
+  altri:
+    - { etichetta: PDF, url: "https://annali.unife.it/lettere/article/view/2318/2152" }
+
+- id: divari-2013
+  gruppo: studi
+  titolo: "L’Opera Bevilacqua La Masa a Venezia: la ripresa dell’attività espositiva nel secondo dopoguerra (1947-1955)"
+  fonte: "Margherita Divari, tesi di laurea magistrale, Università Ca’ Foscari Venezia"
+  anno: "2013"
+  descrizione: "A pagina 41 Romanelli è citato con Luigi Pavanati, Eugenio Da Venezia e Marcello Leoncini tra gli artisti che nel 1947 lasciarono i loro incarichi nell’Opera Bevilacqua La Masa."
+  url: https://unitesi.unive.it/retrieve/f2a990d4-01d6-49ba-a362-96b2fbcbcb71/818311-1160784.pdf
+
+# Cataloghi e pieghevoli in biblioteca
+- id: librinlinea-1963
+  gruppo: biblioteche
+  titolo: "Sculture di Giuseppe Romanelli: 5-18 ottobre 1963"
+  fonte: Librinlinea, catalogo delle biblioteche piemontesi
+  anno: "1963"
+  descrizione: "Catalogo della personale alla Galleria Bevilacqua La Masa di Venezia, con testo di Manlio Alzetta."
+  url: http://www.librinlinea.it/titolo/sculture-di-giuseppe-romanelli-5-ottob/IEI0284807
+  sul_sito: { etichetta: la mostra del 1963, url: /mostre/1963-dal-5-al-18-ottobre/ }
+
+- id: padova-1974
+  gruppo: biblioteche
+  titolo: "Momenti più di scultura e grafica: Giuseppe Romanelli scultore"
+  fonte: BiblioVEA, biblioteche di Venezia
+  anno: "1974"
+  descrizione: "Pieghevole della mostra al Salone Autopiù di Padova, 18 aprile-4 maggio 1974, con biografia dell’artista e invito all’inaugurazione."
+  url: https://polovea.sebina.it/SebinaOpac/resource/momenti-piu-di-scultura-e-grafica-giuseppe-romanelli-scultore-salone-autopiu-padova-dal-18-aprile-al/VEA01557052
+  altri:
+    - { etichetta: "pieghevole digitalizzato (Università di Padova, raccolta Dalla Zorza)", url: "https://phaidra.cab.unipd.it/detail/o:434665?mode=full" }
+
+# Altre presenze in rete
+- id: facebook
+  gruppo: altro
+  titolo: Giuseppe Romanelli
+  fonte: Facebook
+  descrizione: "Pagina dedicata allo scultore, indicata come pagina ufficiale nella voce di Wikipedia."
+  url: https://www.facebook.com/giusepperomanelliscultore/
+
+- id: leland-little
+  gruppo: altro
+  titolo: La sedia, 1960
+  fonte: Leland Little Auctions (Stati Uniti)
+  descrizione: "Bronzo firmato nella fusione, con una vecchia etichetta dattiloscritta sotto la base. Lotto 1519 di un’asta."
+  url: https://lelandlittle.com/items/431813/giuseppe-romanelli-italian-1916-1982-i-la-sedia-i
+  lingua: in inglese
+
+# Testi a stampa citati nella voce di Wikipedia (non consultabili in rete)
+- id: berna-1968
+  gruppo: stampa
+  titolo: "Deux artistes vénitiens: Domenico Boscolo, peinture; Giuseppe Romanelli, sculpteur"
+  fonte: "Catalogo della mostra, Berna, Galerie Haudenschild & Laubscher, 15 marzo-15 maggio"
+  anno: "1968"
+  descrizione: ""
+
+- id: caramel-1970
+  gruppo: stampa
+  titolo: Giuseppe Romanelli
+  fonte: "Giacomo Caramel, catalogo della mostra alla galleria d’arte moderna a-dieci, Padova, dicembre 1970-gennaio 1971"
+  anno: "1970"
+  descrizione: ""
+  sul_sito: { etichetta: la mostra di Padova, url: /mostre/1970-dal-19-dicembre-al-4-gennaio/ }
+
+- id: mazzariol-2000
+  gruppo: stampa
+  titolo: Sculture di Giuseppe Romanelli
+  fonte: "Giuseppe Mazzariol, in «Venezia Arti», 14, p. 141"
+  anno: "2000"
+  descrizione: ""
+
+- id: posocco-2015
+  gruppo: stampa
+  titolo: Notiziario dell’Arciconfraternita di San Rocco in Venezia, n. 33
+  fonte: Franco Posocco
+  anno: "2015"
+  descrizione: ""
+
+- id: baradel-2016
+  gruppo: stampa
+  titolo: Cappella dell’Ospedale civile di San Donà di Piave
+  fonte: "Franco Baradel, Treviso, Gianni Sartori editore"
+  anno: "2016"
+  descrizione: ""

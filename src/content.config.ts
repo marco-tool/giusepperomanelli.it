@@ -1,5 +1,5 @@
 import { defineCollection } from 'astro:content';
-import { glob } from 'astro/loaders';
+import { glob, file } from 'astro/loaders';
 import { z } from 'astro/zod';
 
 // Pagine fisse: Home, Biografia, Curriculum, Opere pubbliche, Contatti, Credits, introduzione Mostre
@@ -52,4 +52,21 @@ const opere = defineCollection({
     }),
 });
 
-export const collections = { pagine, mostre, opere };
+// Pagine esterne che parlano di Romanelli (pagina /riferimenti/): un elemento del file YAML = una fonte
+const link = z.object({ etichetta: z.string(), url: z.string() });
+const riferimenti = defineCollection({
+  loader: file('./src/content/riferimenti.yaml'),
+  schema: z.object({
+    gruppo: z.enum(['enciclopedie', 'opere', 'archivi', 'studi', 'biblioteche', 'altro', 'stampa']),
+    titolo: z.string(),
+    fonte: z.string(),
+    anno: z.string().optional(),
+    descrizione: z.string().default(''),
+    url: z.url().optional(),
+    lingua: z.string().optional(),
+    altri: z.array(link).optional(),
+    sul_sito: link.optional(),
+  }),
+});
+
+export const collections = { pagine, mostre, opere, riferimenti };

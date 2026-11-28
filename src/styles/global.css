@@ -167,3 +167,44 @@ main { max-width: var(--w); margin: 0 auto; padding: 48px 24px 80px; }
   .work h3 { font-size: 1rem; }
   .work p { font-size: 0.85rem; }
 }
+
+/* Riferimenti esterni */
+.rif-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 48px; align-items: center; margin-bottom: 56px; }
+.rif-head figure { margin: 0; background: var(--frame); padding: 14px; }
+.rif-head img { width: 100%; filter: grayscale(1) contrast(1.02); }
+.rif-intro .page-title { margin: 6px 0 18px; }
+.rif-intro > p { margin: 0 0 1em; max-width: 34em; }
+.rif-meta { font-family: var(--sans); font-size: 0.9rem; color: var(--muted); }
+.rif-indice { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; font-family: var(--sans); font-size: 0.85rem; }
+.rif-indice a { color: var(--ink); text-decoration: none; border: 1px solid var(--line); padding: 5px 11px; border-radius: 999px; background: color-mix(in srgb, var(--paper) 70%, #fff); }
+.rif-indice a:hover { border-color: var(--ink); }
+.rif-indice span { color: var(--accent); margin-left: 3px; }
+.rif-gruppo, .rif-segnala { max-width: 900px; margin: 0 auto; scroll-margin-top: 24px; }
+.rif-gruppo + .rif-gruppo { margin-top: 56px; }
+.rif-gruppo h2, .rif-segnala h2 { font-family: var(--display); font-weight: normal; font-size: 1.7rem; line-height: 1.2; margin: 0 0 6px; }
+.rif-gruppo-intro { margin: 0 0 6px; font-family: var(--sans); font-size: 0.9rem; color: var(--muted); }
+.rif-lista { list-style: none; margin: 18px 0 0; padding: 0; border-bottom: 1px solid var(--line); }
+.rif { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 8px 32px; padding: 20px 0; border-top: 1px solid var(--line); }
+.rif-fonte { margin: 3px 0 0; font-family: var(--sans); font-size: 0.82rem; line-height: 1.45; color: var(--muted); letter-spacing: 0.01em; }
+.rif h3 { font-weight: normal; font-size: 1.2rem; line-height: 1.35; margin: 0; }
+.rif h3 a { color: var(--ink); text-decoration-color: var(--accent); text-decoration-thickness: 1px; }
+.rif h3 a:hover { color: var(--accent); }
+.rif h3 a::after { content: " ↗"; font-family: var(--sans); font-size: 0.75em; color: var(--accent); }
+.rif h3 cite { font-style: italic; }
+.rif-desc { margin: 6px 0 0; font-size: 1rem; }
+.rif-link { display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 8px 0 0; font-family: var(--sans); font-size: 0.82rem; }
+.rif-dominio { color: var(--muted); overflow-wrap: anywhere; }
+.rif-interno { font-weight: 600; }
+.rif-segnala { margin-top: 72px; padding: 28px 32px; background: var(--frame); }
+.rif-segnala p { margin: 8px 0 0; max-width: 40em; }
+@media (max-width: 800px) {
+  .rif-head { grid-template-columns: minmax(0, 1fr); gap: 28px; margin-bottom: 40px; }
+  .rif-intro { min-width: 0; }
+  .rif { grid-template-columns: 1fr; gap: 4px; padding: 18px 0; }
+  .rif-segnala { padding: 22px 20px; }
+}
+@media (max-width: 600px) {
+  .rif-indice { flex-wrap: nowrap; overflow-x: auto; margin-right: -24px; padding-right: 24px; scrollbar-width: none; }
+  .rif-indice::-webkit-scrollbar { display: none; }
+  .rif-indice a { white-space: nowrap; }
+}

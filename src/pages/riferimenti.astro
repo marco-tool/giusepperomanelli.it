@@ -1,0 +1,101 @@
+---
+// Riferimenti esterni: chi parla di Giuseppe Romanelli fuori da questo sito.
+// I dati sono in src/content/riferimenti.yaml (una voce = una fonte).
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import { briciole, ogImage, PERSON_ID, SITE } from '../seo';
+import foto from '../assets/uploads/2019/08/IMG_0004.jpg';
+import yaml from '../content/riferimenti.yaml?raw';
+
+const CONTROLLO = '28 novembre 2026';
+
+// Sezioni della pagina, nell'ordine in cui compaiono
+const gruppi: { id: string; titolo: string; intro?: string }[] = [
+  { id: 'enciclopedie', titolo: 'Enciclopedie e schede d’autore' },
+  { id: 'opere', titolo: 'Opere in musei, chiese e cataloghi pubblici' },
+  { id: 'archivi', titolo: 'Archivi della Biennale e della Quadriennale' },
+  { id: 'studi', titolo: 'Studi e ricerche' },
+  { id: 'biblioteche', titolo: 'Cataloghi di mostre in biblioteca' },
+  { id: 'altro', titolo: 'Altre presenze in rete' },
+  { id: 'stampa', titolo: 'Bibliografia a stampa', intro: 'Testi citati nella voce di Wikipedia e non consultabili in rete.' },
+];
+
+// Le voci escono nell'ordine in cui sono scritte nel file YAML
+const ordine = [...yaml.matchAll(/^- id: *(\S+)/gm)].map((m) => m[1]);
+const voci = (await getCollection('riferimenti')).sort((a, b) => ordine.indexOf(a.id) - ordine.indexOf(b.id));
+const perGruppo = gruppi
+  .map((g) => ({ ...g, voci: voci.filter((v) => v.data.gruppo === g.id).map((v) => v.data) }))
+  .filter((g) => g.voci.length > 0);
+const inRete = voci.filter((v) => v.data.url).length;
+const aStampa = voci.length - inRete;
+
+function dominio(url: string) {
+  const u = new URL(url);
+  if (u.hostname === 'web.archive.org') return 'web.archive.org, copia d’archivio';
+  return u.hostname.replace(/^www\./, '');
+}
+
+const descrizione = `Dove si parla di Giuseppe Romanelli fuori da questo sito: Wikipedia, cataloghi dei beni culturali, Ca' Pesaro, archivi della Biennale, studi e biblioteche.`;
+const path = '/riferimenti/';
+const jsonld = [
+  briciole([['Giuseppe Romanelli', '/'], ['Riferimenti', path]]),
+  {
+    '@type': 'CollectionPage',
+    url: `${SITE}${path}`,
+    name: 'Riferimenti esterni su Giuseppe Romanelli',
+    about: { '@id': PERSON_ID },
+    significantLink: voci.filter((v) => v.data.url).map((v) => v.data.url),
+  },
+];
+---
+<Base title="Riferimenti" description={descrizione} image={await ogImage(foto)} jsonld={jsonld}>
+  <header class="rif-head">
+    <figure>
+      <Image src={foto} alt="Giuseppe Romanelli a una sua mostra, accanto a una scultura in legno" widths={[480, 760, 1100]} sizes="(max-width: 800px) 100vw, 520px" loading="eager" />
+    </figure>
+    <div class="rif-intro">
+      <p class="eyebrow">Fonti esterne</p>
+      <h1 class="page-title">Riferimenti</h1>
+      <p>Dove si parla di Giuseppe Romanelli fuori da questo sito: enciclopedie, cataloghi del patrimonio pubblico, musei, archivi, studi universitari e biblioteche.</p>
+      <p class="rif-meta">{inRete} fonti in rete e {aStampa} testi a stampa. Collegamenti controllati il {CONTROLLO}.</p>
+      <nav class="rif-indice" aria-label="Sezioni della pagina">
+        {perGruppo.map((g) => <a href={`#${g.id}`}>{g.titolo} <span>{g.voci.length}</span></a>)}
+      </nav>
+    </div>
+  </header>
+
+  {perGruppo.map((g) => (
+    <section class="rif-gruppo" id={g.id} aria-labelledby={`t-${g.id}`}>
+      <h2 id={`t-${g.id}`}>{g.titolo}</h2>
+      {g.intro && <p class="rif-gruppo-intro">{g.intro}</p>}
+      <ol class="rif-lista">
+        {g.voci.map((v) => (
+          <li class="rif">
+            <p class="rif-fonte">
+              {v.fonte}{v.anno && !v.fonte.includes(v.anno) ? `, ${v.anno}` : ''}
+            </p>
+            <div class="rif-corpo">
+              <h3>
+                {v.url ? <a href={v.url} rel="noopener">{v.titolo}</a> : <cite>{v.titolo}</cite>}
+              </h3>
+              {v.descrizione && <p class="rif-desc">{v.descrizione}</p>}
+              {(v.url || v.altri || v.sul_sito) && (
+                <p class="rif-link">
+                  {v.url && <span class="rif-dominio">{dominio(v.url)}{v.lingua ? `, ${v.lingua}` : ''}</span>}
+                  {v.altri?.map((a) => <a href={a.url} rel="noopener">{a.etichetta}</a>)}
+                  {v.sul_sito && <a class="rif-interno" href={v.sul_sito.url}>Sul sito: {v.sul_sito.etichetta}</a>}
+                </p>
+              )}
+            </div>
+          </li>
+        ))}
+      </ol>
+    </section>
+  ))}
+
+  <aside class="rif-segnala">
+    <h2>Conosci altre fonti?</h2>
+    <p>Articoli, cataloghi, opere in chiese o collezioni pubbliche: se una pagina parla di Giuseppe Romanelli e qui manca, <a href="/contatti/">scrivici</a>. Le pagine esterne cambiano nel tempo: se un collegamento non funziona più, segnalalo.</p>
+  </aside>
+</Base>
