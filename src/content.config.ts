@@ -71,4 +71,19 @@ const riferimenti = defineCollection({
   }),
 });
 
-export const collections = { pagine, mostre, opere, riferimenti };
+// Opere pubbliche: una scheda per luogo (chiesa, scuola, cimitero, museo), pagina /opere-pubbliche/<id>/
+const luoghi = defineCollection({
+  loader: glob({ pattern: '*.md', base: './src/content/luoghi' }),
+  schema: z.object({
+    title: z.string(),
+    ordine: z.number(),
+    zona: z.enum(['venezia', 'isole', 'terraferma', 'provincia', 'veneto', 'italia', 'musei']),
+    luogo: z.string(),
+    citta: z.string(),
+    anno: z.string().optional(),
+    opere: z.array(z.string()).min(1),
+    fonti: z.array(z.object({ etichetta: z.string(), url: z.url().optional() })).min(1),
+  }),
+});
+
+export const collections = { pagine, mostre, opere, riferimenti, luoghi };

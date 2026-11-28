@@ -1,0 +1,32 @@
+---
+import { getCollection, getEntry, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { briciole, ogImage } from '../../seo';
+import { ZONE } from '../../zone';
+import foto from '../../assets/uploads/2019/10/madonna_fatima_1.jpg';
+
+const intro = (await getEntry('pagine', 'opere-pubbliche'))!;
+const { Content } = await render(intro);
+const luoghi = (await getCollection('luoghi')).sort((a, b) => a.data.ordine - b.data.ordine);
+const gruppi = Object.entries(ZONE).map(([id, nome]) => ({ id, nome, voci: luoghi.filter((l) => l.data.zona === id) })).filter((g) => g.voci.length);
+---
+<Base title={intro.data.title} description={intro.data.descrizione} image={await ogImage(foto)} jsonld={[briciole([['Giuseppe Romanelli', '/'], ['Opere pubbliche', '/opere-pubbliche/']])]}>
+  <div class="prose">
+    <h1>Opere pubbliche</h1>
+    <Content />
+    <p class="lead">{luoghi.length} luoghi, in {gruppi.length} gruppi.</p>
+  </div>
+  {gruppi.map((g) => (
+    <section class="rif-gruppo luoghi-gruppo">
+      <h2>{g.nome}</h2>
+      <ul class="luoghi">
+        {g.voci.map((l) => (
+          <li>
+            <a href={`/opere-pubbliche/${l.id}/`}>{l.data.title}</a>
+            <small>{l.data.luogo}, {l.data.citta}{l.data.anno ? ` · ${l.data.anno}` : ''}</small>
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))}
+</Base>

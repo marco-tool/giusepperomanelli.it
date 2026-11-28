@@ -210,3 +210,17 @@ main { max-width: var(--w); margin: 0 auto; padding: 48px 24px 80px; }
 }
 .rif-meta time { white-space: nowrap; }
 .timeline .what small.fonte { font-style: italic; margin-top: 2px; }
+
+/* Opere pubbliche */
+.luoghi { list-style: none; margin: 14px 0 0; padding: 0; border-bottom: 1px solid var(--line); }
+.luoghi li { padding: 12px 0; border-top: 1px solid var(--line); line-height: 1.35; }
+.luoghi a { color: var(--ink); text-decoration-color: var(--accent); }
+.luoghi a:hover { color: var(--accent); }
+.luoghi small { display: block; color: var(--muted); font-family: var(--sans); font-size: 0.85rem; margin-top: 3px; }
+.luoghi-gruppo + .luoghi-gruppo { margin-top: 44px; }
+.prose + .luoghi-gruppo { margin-top: 40px; }
+.scheda-luogo { font-family: var(--sans); font-size: 0.95rem; display: grid; grid-template-columns: auto 1fr; gap: 8px 20px; margin: 0 0 28px; }
+.scheda-luogo dt { color: var(--muted); }
+.scheda-luogo dd { margin: 0; }
+.scheda-luogo ul { margin: 0; padding-left: 1.1em; }
+.prose .altre ul { padding-left: 1.2em; }

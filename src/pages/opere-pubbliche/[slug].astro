@@ -1,0 +1,45 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { briciole, autore, SITE } from '../../seo';
+import { ZONE } from '../../zone';
+
+export async function getStaticPaths() {
+  const luoghi = (await getCollection('luoghi')).sort((a, b) => a.data.ordine - b.data.ordine);
+  return luoghi.map((l, i) => ({ params: { slug: l.id }, props: { l, vicini: luoghi.filter((x) => x.data.zona === l.data.zona && x.id !== l.id) } }));
+}
+const { l, vicini } = Astro.props;
+const { Content } = await render(l);
+const d = l.data;
+const path = `/opere-pubbliche/${l.id}/`;
+const descrizione = `${d.opere.join('; ')}. ${d.luogo}, ${d.citta}${d.anno ? `, ${d.anno}` : ''}. Opera di Giuseppe Romanelli, scultore veneziano.`.slice(0, 300);
+const mappa = `https://www.openstreetmap.org/search?query=${encodeURIComponent(`${d.luogo}, ${d.citta.replace(/\s*\(.*\)/, '')}`)}`;
+const jsonld = [
+  briciole([['Giuseppe Romanelli', '/'], ['Opere pubbliche', '/opere-pubbliche/'], [d.title, path]]),
+  { '@type': 'CreativeWork', name: d.title, url: `${SITE}${path}`, creator: autore, ...(d.anno ? { dateCreated: d.anno } : {}),
+    locationCreated: { '@type': 'Place', name: `${d.luogo}, ${d.citta}` } },
+];
+---
+<Base title={d.title} description={descrizione} jsonld={jsonld}>
+  <article class="prose captions">
+    <a class="back" href="/opere-pubbliche/">← Tutte le opere pubbliche</a>
+    <p class="eyebrow">{ZONE[d.zona]}</p>
+    <h1>{d.title}</h1>
+    <dl class="scheda-luogo">
+      <dt>Luogo</dt><dd>{d.luogo}, {d.citta} · <a href={mappa} rel="noopener">mappa</a></dd>
+      {d.anno && <><dt>Anno</dt><dd>{d.anno}</dd></>}
+      <dt>{d.opere.length > 1 ? 'Opere' : 'Opera'}</dt>
+      <dd><ul>{d.opere.map((o) => <li>{o}</li>)}</ul></dd>
+      <dt>{d.fonti.length > 1 ? 'Fonti' : 'Fonte'}</dt>
+      <dd><ul>{d.fonti.map((f) => <li>{f.url ? <a href={f.url} rel="noopener">{f.etichetta}</a> : f.url === undefined && f.etichetta.startsWith('Curriculum') ? <a href="/curriculum/">{f.etichetta}</a> : f.etichetta}</li>)}</ul></dd>
+    </dl>
+    <Content />
+    <p class="note">Le notizie vengono dalle fonti indicate: la collocazione attuale non sempre è stata verificata. Se conosci quest’opera o hai una fotografia, <a href="/contatti/">scrivici</a>.</p>
+    {vicini.length > 0 && (
+      <section class="altre">
+        <h2>Nella stessa zona</h2>
+        <ul>{vicini.map((v) => <li><a href={`/opere-pubbliche/${v.id}/`}>{v.data.title}</a></li>)}</ul>
+      </section>
+    )}
+  </article>
+</Base>
