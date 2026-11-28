@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
+import { ogImage, autore, briciole, SITE } from '../../seo';
 
 // Pagina di dettaglio solo per le mostre con testo o foto
 export async function getStaticPaths() {
@@ -9,12 +10,39 @@ export async function getStaticPaths() {
 }
 const { m } = Astro.props;
 const { Content } = await render(m);
+const d = m.data;
+const anno = d.data.getFullYear();
+const iso = (x: Date) => x.toISOString().slice(0, 10);
+
+// Titolo per Google: anno, sede e città (la città solo se non è già nel nome della sede)
+const dove = d.sede ? (d.citta && !d.sede.includes(d.citta) ? `${d.sede}, ${d.citta}` : d.sede) : d.luogo;
+const titolo = dove ? `Mostra ${anno}, ${dove}` : d.title;
+const image = await ogImage(d.copertina);
+const path = `/mostre/${m.id}/`;
+
+const evento = {
+  '@type': 'ExhibitionEvent',
+  name: `Mostra di Giuseppe Romanelli${dove ? `, ${dove}` : ''}, ${anno}`,
+  url: `${SITE}${path}`,
+  startDate: d.solo_anno ? String(anno) : iso(d.data),
+  ...(d.fine ? { endDate: iso(d.fine) } : {}),
+  eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+  location: {
+    '@type': 'Place',
+    name: d.sede ?? d.luogo,
+    address: { '@type': 'PostalAddress', addressLocality: d.citta ?? d.luogo, addressCountry: d.paese },
+  },
+  image,
+  ...(d.descrizione ? { description: d.descrizione } : {}),
+  about: autore,
+  performer: autore,
+};
 ---
-<Base title={m.data.title}>
+<Base title={titolo} description={d.descrizione} image={image} jsonld={[evento, briciole([['Giuseppe Romanelli', '/'], ['Mostre', '/mostre/'], [titolo, path]])]}>
   <article class="prose captions">
     <a class="back" href="/mostre/">← Tutte le mostre</a>
-    <span class="eyebrow">{m.data.luogo}</span>
-    <h1>{m.data.title}</h1>
+    <span class="eyebrow">{d.luogo}</span>
+    <h1>{d.title}</h1>
     <Content />
   </article>
 </Base>

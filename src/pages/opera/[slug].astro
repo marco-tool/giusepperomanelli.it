@@ -3,10 +3,24 @@ import { getCollection, render } from 'astro:content';
 import { Image } from 'astro:assets';
 import Base from '../../layouts/Base.astro';
 import Griglia from '../../components/Griglia.astro';
-import { CATEGORIE, annoOrdine } from '../../categorie';
+import { CATEGORIE, annoOrdine, type Categoria } from '../../categorie';
+import { ogImage, autore, briciole, primaFrase, taglia, titoloSeo, SITE, SUFFISSO } from '../../seo';
+
+const ARTFORM: Record<Categoria, string> = {
+  alabastri: 'Scultura', bronzi: 'Scultura', legni: 'Scultura', terracotta: 'Scultura', rame: 'Sbalzo',
+  incisioni: 'Incisione', disegni: 'Disegno', 'altri-materiali': 'Scultura',
+};
 
 export async function getStaticPaths() {
   const opere = await getCollection('opere');
+  // titoli uguali (es. 7 "Disegno senza titolo, 1971"): numerati per renderli unici
+  const gruppi = new Map<string, string[]>();
+  for (const o of [...opere].sort((a, b) => a.id.localeCompare(b.id))) {
+    const t = titoloSeo(o.data);
+    gruppi.set(t, [...(gruppi.get(t) ?? []), o.id]);
+  }
+  const seo = new Map<string, string>();
+  for (const [t, ids] of gruppi) ids.forEach((id, i) => seo.set(id, ids.length > 1 ? `${t} (${i + 1})` : t));
   return opere.map((o) => {
     const stesse = opere
       .filter((x) => x.data.categoria === o.data.categoria)
@@ -16,15 +30,42 @@ export async function getStaticPaths() {
     const vicine = stesse.filter((x) => x.id !== o.id)
       .sort((a, b) => Math.abs(stesse.indexOf(a) - i) - Math.abs(stesse.indexOf(b) - i)).slice(0, 8)
       .sort((a, b) => stesse.indexOf(a) - stesse.indexOf(b));
-    return { params: { slug: o.id }, props: { o, prec: stesse[i - 1], succ: stesse[i + 1], vicine, totale: stesse.length } };
+    return { params: { slug: o.id }, props: { o, prec: stesse[i - 1], succ: stesse[i + 1], vicine, totale: stesse.length, titolo: seo.get(o.id)! } };
   });
 }
-const { o, prec, succ, vicine, totale } = Astro.props;
+const { o, prec, succ, vicine, totale, titolo } = Astro.props;
 const { Content } = await render(o);
 const d = o.data;
 const cat = CATEGORIE[d.categoria];
+const path = `/opera/${o.id}/`;
+const image = await ogImage(d.immagini[0]);
+
+// Descrizione: titolo, tecnica, anno, autore, misure, numero di foto, prima frase della nota
+const quando = typeof d.anno === 'number' ? ` del ${d.anno}` : d.anno ? `, ${d.anno}` : '';
+const cosa = /senza titolo/i.test(d.title) ? titolo : `${d.title}${d.materiale ? `, ${d.materiale.toLowerCase()}` : ''}${quando}${titolo.match(/ \(\d+\)$/)?.[0] ?? ''}`;
+const nota = primaFrase(o.body);
+const descrizione = taglia([
+  `${cosa} di Giuseppe Romanelli, ${SUFFISSO}.`,
+  d.dimensioni ? `Misure: ${d.dimensioni}.` : '',
+  d.immagini.length > 1 ? `${d.immagini.length} fotografie.` : '',
+  nota,
+].filter(Boolean).join(' '));
+
+const opera = {
+  '@type': 'VisualArtwork',
+  name: d.title,
+  url: `${SITE}${path}`,
+  image,
+  creator: autore,
+  artform: ARTFORM[d.categoria],
+  ...(d.materiale ? { artMedium: d.materiale } : {}),
+  ...(typeof d.anno === 'number' ? { dateCreated: String(d.anno) } : {}),
+  ...(d.dimensioni ? { size: d.dimensioni } : {}),
+  description: descrizione,
+};
+const jsonld = [opera, briciole([['Giuseppe Romanelli', '/'], ['Opere', '/opere/'], [cat, `/opere/${d.categoria}/`], [d.title, path]])];
 ---
-<Base title={d.title} description={`${d.title}${d.anno ? `, ${d.anno}` : ''}${d.materiale ? `, ${d.materiale.toLowerCase()}` : ''}. Opera di Giuseppe Romanelli.`}>
+<Base title={titolo} description={descrizione} image={image} jsonld={jsonld}>
   <a class="back" href={`/opere/${d.categoria}/`}>← {cat} ({totale})</a>
   <div class="opera">
     <div class="images">

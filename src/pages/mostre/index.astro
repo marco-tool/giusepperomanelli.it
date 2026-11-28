@@ -2,6 +2,7 @@
 import { getCollection, getEntry, render } from 'astro:content';
 import { Image } from 'astro:assets';
 import Base from '../../layouts/Base.astro';
+import { briciole } from '../../seo';
 
 const intro = await getEntry('pagine', 'mostre');
 const { Content } = await render(intro!);
@@ -9,7 +10,7 @@ const mostre = (await getCollection('mostre')).sort((a, b) => a.data.data.valueO
 const conPagina = (m: (typeof mostre)[number]) => (m.body ?? '').trim().length > 0;
 const testo = (t: string) => t.replace(/^\d{4},\s*/, '');
 ---
-<Base title="Mostre">
+<Base title="Mostre" description={intro!.data.descrizione} jsonld={[briciole([['Giuseppe Romanelli', '/'], ['Mostre', '/mostre/']])]}>
   <div class="prose">
     <h1>Mostre</h1>
     <Content />
@@ -23,7 +24,7 @@ const testo = (t: string) => t.replace(/^\d{4},\s*/, '');
           {conPagina(m) ? <a href={`/mostre/${m.id}/`}>{testo(m.data.title)}</a> : testo(m.data.title)}
           {m.data.luogo && <small>{m.data.luogo}</small>}
         </span>
-        <span class="thumb">{m.data.copertina && <a href={`/mostre/${m.id}/`} tabindex="-1"><Image src={m.data.copertina} alt="" width={220} /></a>}</span>
+        <span class="thumb">{m.data.copertina && <a href={`/mostre/${m.id}/`} tabindex="-1"><Image src={m.data.copertina} alt={`Opuscolo della mostra del ${m.data.data.getFullYear()}${m.data.luogo ? `, ${m.data.luogo}` : ''}`} width={220} /></a>}</span>
       </li>
     ))}
   </ul>

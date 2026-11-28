@@ -1,8 +1,9 @@
 ---
 title: "Mostre"
+descrizione: "Le mostre di Giuseppe Romanelli dal 1937 al 1982: Biennale di Venezia, Quadriennale di Roma e personali in Italia e in Austria, con opuscoli e testi critici."
 ---
 
-![](../../assets/uploads/2019/08/IMG_0004.jpg)
+![Giuseppe Romanelli a una sua mostra, accanto a una scultura in legno](../../assets/uploads/2019/08/IMG_0004.jpg)
 
 Dal 1937 fino alla morte ha esposto a mostre personali e collettive, tra cui la [Biennale di Venezia](https://web.archive.org/web/20220626083013/http://asac.labiennale.org/it/passpres/artivisive/sem-ricerca.php?Spersona=377554) e la [Quadriennale di Roma](https://web.archive.org/web/20241005181435/http://www.quadriennalediroma.org/arbiq_web/index.php?sezione=artisti&id=9683&ricerca=romanelli) e ad altre mostre nelle seguenti città: Venezia, Mestre, Padova, Treviso, Verona, Pordenone, Cortina d’Ampezzo, Trento, Udine, Trieste, Brescia, Milano, Novara, Torino, Genova, Bologna, Firenze, Roma, Palermo, Vienna, Sion, Berna, Parigi, L’Aia, Amsterdam, Anversa, Amburgo, Stoccolma, Madrid, S. Paolo del Brasile, Rio de Janeiro, Taipei.
 

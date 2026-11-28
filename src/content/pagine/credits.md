@@ -1,5 +1,6 @@
 ---
 title: "Credits"
+descrizione: "Chi ha realizzato e cura il sito dedicato a Giuseppe Romanelli, scultore veneziano (1916–1982)."
 ---
 
 Progetto realizzato da [Marco Miolo](https://www.linkedin.com/in/marcomiolo/).

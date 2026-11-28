@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
+import { persona, briciole } from '../seo';
 
 export async function getStaticPaths() {
   const pagine = await getCollection('pagine', (p) => !['home', 'mostre'].includes(p.id));
@@ -8,8 +9,11 @@ export async function getStaticPaths() {
 }
 const { p } = Astro.props;
 const { Content } = await render(p);
+const path = `/${p.id}/`;
+const jsonld: object[] = [briciole([['Giuseppe Romanelli', '/'], [p.data.title, path]])];
+if (p.id === 'biografia') jsonld.push({ '@type': 'ProfilePage', url: `https://www.giusepperomanelli.it${path}`, mainEntity: await persona() });
 ---
-<Base title={p.data.title}>
+<Base title={p.data.title} description={p.data.descrizione} jsonld={jsonld}>
   <article class={`prose${p.id === "opere-pubbliche" ? " captions" : ""}`}>
     <h1>{p.data.title}</h1>
     <Content />

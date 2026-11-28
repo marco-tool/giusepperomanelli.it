@@ -5,14 +5,28 @@ import '@fontsource/source-serif-4/600.css';
 import '@fontsource/bodoni-moda/400.css';
 import '@fontsource/source-sans-3/400.css';
 import '../styles/global.css';
+import { ogImage } from '../seo';
 
 interface Props {
   title?: string;
   description?: string;
+  /** URL assoluto dell'immagine di anteprima (da ogImage); di default il ritratto */
+  image?: string;
+  /** Dati strutturati schema.org: uno o più oggetti */
+  jsonld?: object[];
+  ogType?: string;
 }
-const { title, description = 'Giuseppe Romanelli (Venezia 1916–1982), scultore. Biografia, opere, mostre e opere pubbliche.' } = Astro.props;
-const fullTitle = title ? `${title} | Giuseppe Romanelli` : 'Giuseppe Romanelli | Scultore';
+const {
+  title,
+  description = 'Giuseppe Romanelli (Venezia 1916–1982), scultore veneziano allievo di Arturo Martini: biografia, catalogo di oltre 300 opere, mostre e opere pubbliche.',
+  jsonld = [],
+  ogType = 'website',
+} = Astro.props;
+const image = Astro.props.image ?? (await ogImage());
+const fullTitle = title ? `${title} | Giuseppe Romanelli` : 'Giuseppe Romanelli, scultore veneziano (1916–1982)';
 const path = Astro.url.pathname;
+const canonical = new URL(path, Astro.site).href;
+const ld = jsonld.length ? JSON.stringify({ '@context': 'https://schema.org', '@graph': jsonld }).replace(/</g, '\\u003c') : '';
 const menu = [
   ['/biografia/', 'Biografia'],
   ['/curriculum/', 'Curriculum'],
@@ -29,10 +43,18 @@ const menu = [
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={new URL(path, Astro.site)} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content="Giuseppe Romanelli" />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:url" content={canonical} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    {ld && <script type="application/ld+json" set:html={ld} />}
   </head>
   <body>
     <header class="site-header">

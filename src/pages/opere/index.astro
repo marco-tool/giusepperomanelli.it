@@ -3,6 +3,8 @@ import { getCollection } from 'astro:content';
 import { Image } from 'astro:assets';
 import Base from '../../layouts/Base.astro';
 import { CATEGORIE, type Categoria } from '../../categorie';
+import { ogImage, briciole } from '../../seo';
+import imgOpere from '../../assets/uploads/2019/05/giuseppe-romanelli-opere.jpg';
 
 // Copertine di categoria preparate nel 2019 (se manca, si usa la prima opera)
 const copertine = import.meta.glob<{ default: ImageMetadata }>('../../assets/copertine/*.jpg', { eager: true });
@@ -15,7 +17,7 @@ const categorie = (Object.keys(CATEGORIE) as Categoria[])
 const totale = opere.length;
 const foto = opere.reduce((n, o) => n + o.data.immagini.length, 0);
 ---
-<Base title="Opere" description={`Catalogo delle opere di Giuseppe Romanelli: ${totale} opere tra sculture, incisioni e disegni, dal 1937 al 1982.`}>
+<Base title="Opere" description={`Catalogo delle opere di Giuseppe Romanelli, scultore veneziano: ${totale} opere tra bronzi, legni, terrecotte, alabastri, incisioni e disegni, dal 1937 al 1982.`} image={await ogImage(imgOpere)} jsonld={[briciole([['Giuseppe Romanelli', '/'], ['Opere', '/opere/']])]}>
   <h1 class="page-title">Opere</h1>
   <p class="lead">{totale} opere, {foto} fotografie, dal 1937 al 1982. Il catalogo è in corso di riordino: titoli, date e misure verranno completati nel tempo.</p>
   <div class="cats">

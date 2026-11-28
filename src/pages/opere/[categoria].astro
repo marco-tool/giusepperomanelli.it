@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import Griglia from '../../components/Griglia.astro';
 import { CATEGORIE, annoOrdine, type Categoria } from '../../categorie';
+import { ogImage, briciole, SUFFISSO } from '../../seo';
 
 // Una pagina per ogni categoria che contiene almeno un'opera
 export async function getStaticPaths() {
@@ -21,8 +22,14 @@ export async function getStaticPaths() {
 const { opere } = Astro.props;
 const k = Astro.params.categoria as Categoria;
 const label = CATEGORIE[k];
+const anni = opere.map((o) => o.data.anno).filter((a): a is number => typeof a === 'number');
+const arco = anni.length > 1 ? `, dal ${Math.min(...anni)} al ${Math.max(...anni)}` : '';
+const copertine = import.meta.glob<{ default: ImageMetadata }>('../../assets/copertine/*.jpg', { eager: true });
+const image = await ogImage(copertine[`../../assets/copertine/${k}.jpg`]?.default ?? opere[0].data.immagini[0]);
+const descrizione = `${label} di Giuseppe Romanelli, ${SUFFISSO}: ${opere.length} ${opere.length === 1 ? 'opera' : 'opere'} in ordine cronologico${arco}, con schede e fotografie.`;
+const jsonld = [briciole([['Giuseppe Romanelli', '/'], ['Opere', '/opere/'], [label, `/opere/${k}/`]])];
 ---
-<Base title={label} description={`${label} di Giuseppe Romanelli: ${opere.length} opere.`}>
+<Base title={label} description={descrizione} image={image} jsonld={jsonld}>
   <a class="back" href="/opere/">← Tutte le categorie</a>
   <h1 class="page-title">{label}</h1>
   <p class="lead">{opere.length} {opere.length === 1 ? 'opera' : 'opere'}, in ordine cronologico</p>

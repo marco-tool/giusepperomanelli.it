@@ -1,5 +1,6 @@
 ---
 title: "Curriculum"
+descrizione: "Curriculum di Giuseppe Romanelli dal dattiloscritto originale: formazione con Bellotto e Arturo Martini, mostre dal 1937, premi, collezioni e critica."
 ---
 
 ![Giuseppe Romanelli](../../assets/uploads/2019/09/IMG_0006-1.jpg)

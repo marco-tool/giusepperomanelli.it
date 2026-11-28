@@ -5,7 +5,11 @@ import { z } from 'astro/zod';
 // Pagine fisse: Home, Biografia, Curriculum, Opere pubbliche, Contatti, Credits, introduzione Mostre
 const pagine = defineCollection({
   loader: glob({ pattern: '*.md', base: './src/content/pagine' }),
-  schema: z.object({ title: z.string() }),
+  schema: z.object({
+    title: z.string(),
+    // meta description per Google (max ~155 caratteri)
+    descrizione: z.string().optional(),
+  }),
 });
 
 // Una mostra = un file. Se il file ha testo o foto, la mostra ha una sua pagina.
@@ -17,6 +21,14 @@ const mostre = defineCollection({
       data: z.coerce.date(),
       luogo: z.string().optional(),
       copertina: image().optional(),
+      // per titolo, descrizione e dati strutturati (solo mostre con pagina)
+      sede: z.string().optional(),
+      citta: z.string().optional(),
+      paese: z.string().default('IT'),
+      fine: z.coerce.date().optional(),
+      // true se "data" è solo un segnaposto per l'anno
+      solo_anno: z.boolean().default(false),
+      descrizione: z.string().optional(),
     }),
 });
 

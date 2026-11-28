@@ -1,5 +1,6 @@
 ---
 title: "Biografia"
+descrizione: "Biografia di Giuseppe Romanelli, scultore nato a Venezia nel 1916: gli studi all'Accademia di Belle Arti, Arturo Martini, le Biennali e le opere pubbliche."
 ---
 
 ![Giuseppe Romanelli](../../assets/uploads/2019/02/IMG_0002.jpg)
