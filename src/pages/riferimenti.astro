@@ -1,6 +1,7 @@
 ---
 // Riferimenti esterni: chi parla di Giuseppe Romanelli fuori da questo sito.
 // I dati sono in src/content/riferimenti.yaml (una voce = una fonte).
+import { execSync } from 'node:child_process';
 import { getCollection } from 'astro:content';
 import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
@@ -8,7 +9,21 @@ import { briciole, ogImage, PERSON_ID, SITE } from '../seo';
 import foto from '../assets/uploads/2019/08/IMG_0004.jpg';
 import yaml from '../content/riferimenti.yaml?raw';
 
-const CONTROLLO = '28 novembre 2026';
+// Data dell'ultimo controllo di tutti i collegamenti (da aggiornare a mano dopo ogni controllo)
+const CONTROLLO = '2026-11-28';
+
+// Ultimo aggiornamento = data dell'ultimo commit che ha toccato il file dei dati.
+// Serve la storia git completa (fetch-depth: 0 nel workflow); se manca, si usa la data del controllo.
+function dataUltimoCommit(file: string): string | null {
+  try {
+    if (execSync('git rev-parse --is-shallow-repository', { encoding: 'utf8' }).trim() === 'true') return null;
+    return execSync(`git log -1 --format=%cs -- ${file}`, { encoding: 'utf8' }).trim() || null;
+  } catch {
+    return null;
+  }
+}
+const aggiornato = dataUltimoCommit('src/content/riferimenti.yaml') ?? CONTROLLO;
+const inLettere = (iso: string) => new Date(`${iso}T12:00:00Z`).toLocaleDateString('it-IT', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Rome' });
 
 // Sezioni della pagina, nell'ordine in cui compaiono
 const gruppi: { id: string; titolo: string; intro?: string }[] = [
@@ -45,6 +60,7 @@ const jsonld = [
     url: `${SITE}${path}`,
     name: 'Riferimenti esterni su Giuseppe Romanelli',
     about: { '@id': PERSON_ID },
+    dateModified: aggiornato,
     significantLink: voci.filter((v) => v.data.url).map((v) => v.data.url),
   },
 ];
@@ -58,7 +74,12 @@ const jsonld = [
       <p class="eyebrow">Fonti esterne</p>
       <h1 class="page-title">Riferimenti</h1>
       <p>Dove si parla di Giuseppe Romanelli fuori da questo sito: enciclopedie, cataloghi del patrimonio pubblico, musei, archivi, studi universitari e biblioteche.</p>
-      <p class="rif-meta">{inRete} fonti in rete e {aStampa} testi a stampa. Collegamenti controllati il {CONTROLLO}.</p>
+      <p class="rif-meta">
+        {inRete} fonti in rete e {aStampa} testi a stampa.<br />
+        {aggiornato === CONTROLLO
+          ? <>Ultimo aggiornamento e controllo dei collegamenti: <time datetime={aggiornato}>{inLettere(aggiornato)}</time>.</>
+          : <>Ultimo aggiornamento: <time datetime={aggiornato}>{inLettere(aggiornato)}</time>. Collegamenti controllati il <time datetime={CONTROLLO}>{inLettere(CONTROLLO)}</time>.</>}
+      </p>
       <nav class="rif-indice" aria-label="Sezioni della pagina">
         {perGruppo.map((g) => <a href={`#${g.id}`}>{g.titolo} <span>{g.voci.length}</span></a>)}
       </nav>

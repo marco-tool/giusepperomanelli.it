@@ -208,3 +208,4 @@ main { max-width: var(--w); margin: 0 auto; padding: 48px 24px 80px; }
   .rif-indice::-webkit-scrollbar { display: none; }
   .rif-indice a { white-space: nowrap; }
 }
+.rif-meta time { white-space: nowrap; }
